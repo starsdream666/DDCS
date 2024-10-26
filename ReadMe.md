@@ -20,6 +20,10 @@ sudo python3 ddcs.py
 ## 运行结果
 ![](images/1.png)
 
+## 更多问题？
+有问题的可以扫码加群咨询。
+![](images/1.jpg)
+
 ## 更新历史
 2024.8.13 发布MAC版本
 
