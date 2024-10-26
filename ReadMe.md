@@ -4,6 +4,13 @@ DDCS（Docker Desktop Chinese Script）的MAC版本。
 
 <big>**你可以在这个仓库找到各个版本的汉化包：【 https://github.com/asxez/DockerDesktop-CN 】**</big>
 
+## 说明
+报错多为权限原因，查查报错是什么问题，若真为脚本问题再issue。
+
+## 环境需求
+- python3.10+
+- nodejs
+
 ## 使用方法
 下载源码，启动终端并进入到源码根目录，使用以下命令即可：
 ```bash
