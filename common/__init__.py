@@ -4,3 +4,5 @@
 #
 # @Time    : 2024/8/10 上午11:24
 # @Author  : ASXE
+
+from . import log
