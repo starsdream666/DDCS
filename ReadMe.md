@@ -11,6 +11,14 @@ DDCS（Docker Desktop Chinese Script）的MAC版本。
 - python3.10+
 - nodejs
 
+**注意：如果出现如下报错则：**
+```text
+asar : 无法将“asar”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。
+```
+```bash
+npm install asar
+```
+
 ## 使用方法
 下载源码，启动终端并进入到源码根目录，使用以下命令即可：
 ```bash
