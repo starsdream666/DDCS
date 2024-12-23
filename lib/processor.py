@@ -91,7 +91,7 @@ class DDProcessor:
         env['PATH'] = '/usr/local/bin:' + env['PATH']
         if not command_exists('npx asar'):
             log.info('正在下载必要包...')
-            os.system('npm install asar')
+            os.system('npm install -g asar')
         try:
             result = subprocess.run(['npx', 'asar', 'extract', 'app.asar', 'app'], check=True, env=env)
             if result.returncode != 0:
