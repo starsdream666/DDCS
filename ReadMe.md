@@ -24,6 +24,9 @@ npm install -g asar
 ```bash
 sudo python3 ddcs.py
 ```
+```bash
+sudo python3 ddcs.py --v2
+```
 
 ## 运行结果
 ![](images/1.png)
