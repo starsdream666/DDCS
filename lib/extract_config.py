@@ -1,10 +1,21 @@
 config = [
+    ("    ssh-add <path to your private ssh key>", "    ssh-add <你的 ssh 私钥路径>"),  # deleted at version 4.44.3
     (" Consult Docker's {0} or the {1}", "查阅 Docker 的 {0} 或 {1}"),
-    (" Create a cluster containing one or more nodes with kind. Requires the {0}", ""),
+    (
+        " Create a cluster containing one or more nodes with kind. Must be signed in to your Docker account. Requires the {0}",
+        " 使用 kind 创建包含单节点或多节点的集群。必须登录到您的 Docker 帐户。需要 {0}",
+    ),  # deleted at version 4.44.3
+    (
+        " Create a cluster containing one or more nodes with kind. Requires the {0}",
+        "使用 kind 创建包含单节点或多节点的集群。需要 {0}",
+    ),
     (" Explore the {0} or {1}.", " 探索 {0} 或 {1}。"),
     (" If the error persists, please {0}", "如果错误持续，请 {0}"),
+    (" OPEN IN VSCODE ", None),  # deleted at version 4.44.3
     (" Upgrade your {0} to get access to the Support team.", " 升级你的 {0} 以获得支持团队的帮助。"),
     (" and {0} for requests.", "并 {0} 以获取请求。"),
+    ('"{0}" will have {1} {2} violations.', '"{0}" 将会有 {1} {2} 违规。'),  # deleted at version 4.44.3
+    ("(source: {0})", "（源: {0}）"),  # deleted at version 4.44.3
     ("(was {0})", "（是{0}）"),
     ("({0})", None),
     ("--build-context [name]=[value]", None),
@@ -50,15 +61,26 @@ config = [
         "机密（Secret）是指任何不应在网络上传输或未经加密存储在 Dockerfile 或应用源码中的数据，如密码、证书或 API 密钥。{0}",
     ),
     ("A terminal directly within Docker Desktop", "Docker Desktop 集成终端"),
+    (
+        "A unified workflow to run and manage containerized projects",
+        "运行和管理容器化项目的统一工作流",
+    ),  # deleted at version 4.44.3
     ("AI", None),
+    ("AI Playground", "AI 游乐场"),  # deleted at version 4.44.3
     ("AI/ML guides", "AI/机器学习指南"),
     ("ARCHITECTURE", ""),
     ("Ability to build and run Wasm containers", "构建和运行 Wasm 容器的能力"),
+    (
+        "Aborted due to condition callback returning false.",
+        "由于条件回调返回 false 而中止。",
+    ),  # deleted at version 4.44.3
     ("About", "关于"),
     ("About Docker Desktop", "关于 Docker Desktop"),
     ("Accelerate GenAI Workflows with Docker {0}", "使用 Docker {0} 加速生成式 AI 工作流"),
     ("Accept", "接受"),
+    ("Accept and enable", "接受并启用"),  # deleted at version 4.44.3
     ("Accepted risk", "接受的风险"),
+    ("Access experimental features", "访问实验性功能"),  # deleted at version 4.44.3
     ("Access your local folder from a container", "从容器中访问你的本地文件夹"),
     ("Account Settings", "账户设置"),
     ("Accumulated time:", "累计时间:"),
@@ -74,6 +96,7 @@ config = [
     ("Active builds{0}", "活跃构建{0}"),
     ("Active subscription required. {0}", "需要有效订阅。{0}"),
     ("Actual behavior", "实际行为"),
+    ("Add Extensions", "添加扩展"),  # deleted at version 4.44.3
     ("Add IP address", "添加 I P地址"),
     ("Add IP address or hostname", "添加 IP 地址或主机名"),
     ("Add MCP server", "添加 MCP 服务"),
@@ -109,9 +132,15 @@ config = [
     ("Additional information", "附加信息"),
     ("Address or interface name to advertise.", "要公开的地址或接口名称。"),
     (
+        "Adds access to your Docker containers, images and volumes",
+        "添加对 Docker 容器、镜像和卷的访问权限",
+    ),  # deleted at version 4.44.3
+    ("Adds access to your Kubernetes cluster", "添加对 Kubernetes 集群的访问权限"),  # deleted at version 4.44.3
+    (
         "Adjusts the CPU priority for the container, important for controlling CPU resource allocation.",
         "调整容器的 CPU 优先级，这对于控制 CPU 资源分配很重要。",
     ),
+    ("Admin Console", "管理控制台"),  # deleted at version 4.44.3
     ("Advanced", "高级"),
     ("Advanced Information", "高级信息"),
     ("Advanced image analysis", "高级镜像分析"),
@@ -120,13 +149,17 @@ config = [
         "高级镜像分析可以通过查看 {0} 上的任何镜像来访问。",
     ),
     ("Advanced image analysis with Docker Scout", "使用 Docker Scout 进行高级镜像分析"),
+    ("Advanced options", "高级选项"),  # deleted at version 4.44.3
     ("Advanced settings", "高级设置"),
+    ("Advanced settings - optional", "高级设置 - 可选"),  # deleted at version 4.44.3
     ("Advertise user-defined resource.", "公开用户定义的资源。"),
     ("Affected Users", "受影响用户"),
     ("Affected package(s)", "影响软件包"),
+    ("Affected range:", "受影响范围:"),  # deleted at version 4.44.3
     ("Affected version range:", "受影响版本范围:"),
     ("Age", "年龄"),
     ("Alias", "别名"),
+    ("Alias: ", "别名: "),  # deleted at version 4.44.3
     ("Alias:\xa0", "别名:\xa0"),
     ("Aliases", "别名"),
     ("All", "全部"),
@@ -143,6 +176,10 @@ config = [
     ("All settings and data are removed.", "所有设置和数据都将被删除。"),
     ("All settings and data will be removed.", "所有设置和数据将被删除。"),
     ("All stacks and Kubernetes resources are deleted.", "所有堆栈和 Kubernetes 资源都将被删除。"),
+    (
+        "All stacks and Kubernetes resources will be deleted.",
+        "所有堆栈和 Kubernetes 资源都将被删除。",
+    ),  # deleted at version 4.44.3
     ("Allow", "允许"),
     (
         "Allow Docker Desktop to automatically update components that don't require a restart.",
@@ -160,6 +197,10 @@ config = [
     ("Allow the {0} MCP server to use the {1} integration", "允许 {0} MCP 服务使用 {1} 集成"),
     ("Allow wildcard", "允许通配符"),
     ("Alphabetical", "字母顺序"),
+    (
+        "Already have Git installed? Resolve by following\xa0{0}.",
+        "已经安装了 Git ？通过以下方式解决\xa0{0}。",
+    ),  # deleted at version 4.44.3
     ("Already have an account? {0}", "已有账号？{0}"),
     ("Also known as {0}.", "也称为 {0}。"),
     ("Also known as: {0}", "也称为: {0}"),
@@ -170,6 +211,7 @@ config = [
     ("Always download updates", "始终下载更新"),
     ("Always replace existing dest paths", "总是替换现有的目标路径"),
     ("Amazon S3 bucket", "Amazon S3 存储桶"),
+    ("An all-in-one container workflow", "多合一容器工作流"),  # deleted at version 4.44.3
     ("An error has occurred while fetching the container files", "获取容器文件时发生错误"),
     ("An error has occurred while refreshing the container files", "刷新容器文件时发生错误"),
     (
@@ -216,8 +258,20 @@ config = [
     ("Arguments", "参数"),
     ("Artifact", "产物"),
     ("Artifactory integration", "Artifactory 集成"),
+    (
+        "As you work with Docker, you can run services, view logs, create and modify your run commands here",
+        "在使用 Docker 时，您可以在这里运行服务、查看日志、创建和修改运行命令",
+    ),  # deleted at version 4.44.3
     ("Ask Gordon", "问 Gordon"),
+    (
+        "Ask Gordon is your personal AI assistant embedded in Docker Desktop and the Docker CLI. It's designed to streamline your workflow and help you make the most of the Docker ecosystem.",
+        "问 Gordon 是嵌入在 Docker Desktop 和 Docker 命令行中的个人 AI 助手。它旨在简化您的工作流程，并帮助您充分利用 Docker 生态系统。",
+    ),  # deleted at version 4.44.3
     ("Ask a question...", "问个问题..."),
+    (
+        "Ask any question about Docker to your personal AI. Learn how to improve your workflow and better leverage the Docker ecosytem.",
+        "向你的个人 AI 询问有关 Docker 的任何问题。学习如何改进你的工作流程并更好地利用 Docker 生态系统。",
+    ),  # deleted at version 4.44.3
     ("Ask this again", "再问一次这个"),
     ("Associate a volume with your service", "将卷与服务关联"),
     ("At", "于"),
@@ -229,6 +283,7 @@ config = [
     ("Attributes", "属性"),
     ("Authenticated", "已验证"),
     ("Author", "作者"),
+    ("Author: ", "作者:"),  # deleted at version 4.44.3
     (
         "Authorization plugins to load. Either the plugin's name or a path to its specification file.",
         "要加载的授权插件。可以是插件的名称或其规范文件的路径。",
@@ -238,6 +293,7 @@ config = [
     ("Authorized", "已授权"),
     ("Auto (recommended)", "自动(推荐)"),
     ("Automatically", "自动"),
+    ("Automatically (edits your shell configuration)", "自动（编辑你的 Shell 配置）"),  # deleted at version 4.44.3
     ("Automatically check configuration", "自动检查配置"),
     ("Automatically check for updates", "自动检查更新"),
     ("Automatically download new updates in background.", "在后台自动下载新的更新。"),
@@ -245,6 +301,10 @@ config = [
         "Automatically start Scout SBOM indexing of newly built or pulled images, and when an image is inspected.",
         "当新构建、拉取以及检查镜像时自动启动 Scout SBOM 索引。",
     ),
+    (
+        "Automatically starts SBOM indexing newly built or pulled images, and when an image is inspected.",
+        "当新构建、拉取以及检查镜像时自动启动 SBOM 索引。",
+    ),  # deleted at version 4.44.3
     ("Automatically update components", "自动更新组件"),
     ("Available Model Variants", "可用的模型变体"),
     ("Available builders", "可用的构建器"),
@@ -255,6 +315,7 @@ config = [
     ("Backend", None),
     ("Base image layers", "基础镜像层"),
     ("Based on selected network mode", "基于已选择的网络模式"),
+    ("Basic UI", "基本 UI"),  # deleted at version 4.44.3
     ("Before getting started with this guide, make sure you've completed {0}.", "在开始该指南前，确保你已经完成 {0}。"),
     (
         "Before reporting a bug or contacting Docker Support, read our troubleshooting {0}, especially the {1} ",
@@ -268,9 +329,17 @@ config = [
     ("Beta", "测试"),
     ("Beta features", "Beat 功能"),
     (
+        "Beta features are initial releases of potential future features. Users who participate in our beta programs have the opportunity to validate and provide feedback on future functionality. This helps us focus our efforts on what provides the most value to our users.",
+        "Beta 功能是潜在的未来功能的初始版本。参与我们 beta 计划的用户有机会验证并提供有关未来功能的反馈。这有助于我们将精力集中为用户提供最大价值。",
+    ),  # deleted at version 4.44.3
+    (
         "Beta features are work in progress and subject to change. Use them to explore and influence upcoming functionality.",
         "测试功能尚在优化中，可能会随时发生变化，欢迎试用并反馈，共同完善产品。",
     ),
+    (
+        "Beta features can be discontinued without notice. {0}",
+        "Beat 功能可能在没有通知的情况下停用。{0}",
+    ),  # deleted at version 4.44.3
     ("Billing {0}", ""),
     ("Bind mounts", "绑定挂载"),
     ("Blog post", "博客文章"),
@@ -287,6 +356,7 @@ config = [
     ("Bug", None),
     ("Bug Report", "Bug 报告"),
     ("Bug fix", "Bug 修复"),
+    ("Bugsnag", None),  # deleted at version 4.44.3
     ("Build", "构建"),
     (
         "Build arguments adds flexibility to your builds. You can pass build arguments at build-time, and you can set a default value in your Dockerfile as fallback. {0}",
@@ -320,11 +390,17 @@ config = [
         "未找到账户 {1} 的构建器 {0} 或你无权访问。",
     ),
     ("Builders", "构建器"),
+    ("Building image...", "构建镜像中..."),  # deleted at version 4.44.3
     ("Building images", "构建镜像"),
     ("Building multi-platform images and images with attestations", "构建多平台镜像和带有证明的镜像"),
+    ("Building...", "构建中..."),  # deleted at version 4.44.3
     ("Builds", "构建"),
     ("Built by Docker", "由 Docker 构建"),
     ("Business subscription required. {0}", "需要商业订阅。{0}"),
+    (
+        "By default, Docker daemon is not using the configured proxy when it is running in Windows containers mode. In order to achieve this, an intermediary proxy must be exposed on tcp://localhost:<port>. {0} Leave 0 (zero) for assigning a random port. {1} A new random port will be assigned on each application start, unless it is locked via admin settings.",
+        "默认情况下，Docker 守护程序在 Windows 容器模式下运行时不使用配置的代理。为了实现这一点，必须在 tcp://localhost:<port> 上暴露一个中间代理。{0} 输入 0（零）分配随机端口。{1} 每次应用启动时都会分配一个新的随机端口，除非通过管理员设置锁定。",
+    ),  # deleted at version 4.44.3
     (
         "By default, Docker daemon is not using the configured proxy when\\n            it is running in Windows containers mode. In order to achieve\\n            this, an intermediary proxy must be exposed on tcp://localhost:<port>. \\n            Leave 0 (zero) for assigning a random port. \\n            A new random port will be assigned on each application start, unless it\\n            is locked via admin settings.",
         "默认情况下，Docker 守护程序在 Windows 容器模式下运行时不使用配置的代理。\\n            为了实现这一点，必须在 tcp://localhost:<port> 上暴露一个中间代理。\\n            输入 0（零）分配随机端口。每次应用启动时都会分配一个新的随机端口，\\n            除非通过管理员设置锁定。",
@@ -349,9 +425,15 @@ config = [
     ("CVE ID", "漏洞 ID"),
     ("CVE age", "漏洞年龄"),
     ("CVE details:", "漏洞详情:"),
+    (
+        "CVE in additional layers (added on top of the base image)",
+        "附加层中的漏洞（添加在基础镜像之上）",
+    ),  # deleted at version 4.44.3
     ("CVE in base image layers", "基础镜像层中的漏洞"),
     ("CVE publish date:", "漏洞发布日期:"),
+    ("CVE severity", "漏洞严重性"),  # deleted at version 4.44.3
     ("CVSS Score:", "CVSS 分数:"),
+    ("CVSS Vector:", "CVSS 向量:"),  # deleted at version 4.44.3
     ("Cache", "缓存"),
     ("Cache ID", "缓存 ID"),
     ("Cache sharing option", "缓存共享选项"),
@@ -366,6 +448,7 @@ config = [
         "Cannot access Docker Scout image analysis for Docker Hub because your organization has exceeded your plan's repository limit",
         "由于您的组织超出了计划的存储库限制，因此无法访问 Docker Hub 的 Docker Scout 镜像分析",
     ),
+    ("Cannot change shared directories", "无法更改共享目录"),  # deleted at version 4.44.3
     ("Cannot connect to builder", "无法连接到构建器"),
     ("Cannot enable Docker Scout{0}", "无法启用 Docker Scout{0}"),
     ("Cannot get the list of Docker models", "无法获取 Docker 模型列表"),
@@ -385,6 +468,8 @@ config = [
     ("Change preferences", "更改首选项"),
     ("Change selected builder", "更改选中的构建器"),
     ("Change the Kubernetes cluster mode?", "更改 Kubernetes 集群模式？"),
+    ("Change the Kubernetes cluster node count?", "更改 Kubernetes 集群节点树？"),  # deleted at version 4.44.3
+    ("Change the Kubernetes cluster version?", "更改 Kubernetes 集群版本？"),  # deleted at version 4.44.3
     (
         "Change your extensions settings to be able to install extensions not distributed through the Marketplace.",
         "更改扩展设置，以安装未通过扩展市场分发的扩展。",
@@ -397,9 +482,17 @@ config = [
         "更改 Kubernetes 版本会重置您的集群。删除所有堆栈和资源。",
     ),
     (
+        "Changing the cluster version deletes the current cluster and creates a new one.",
+        "更改集群版本会删除当前集群并创建一个新集群。",
+    ),  # deleted at version 4.44.3
+    (
         "Changing the mode deletes the current cluster and creates a new one.",
         "更改模式将删除当前集群并创建一个新集群。",
     ),
+    (
+        "Changing the number of nodes deletes the current cluster and creates a new one.",
+        "更改节点数量将删除当前集群并创建一个新集群。",
+    ),  # deleted at version 4.44.3
     (
         "Changing the number of nodes resets the cluster. All stacks and resources are deleted.",
         "更改节点数将重置群集。删除所有堆栈和资源。",
@@ -410,13 +503,21 @@ config = [
     ("Chat using {0}", ""),
     ("Check back for more features soon, or sign up for our {0}.", "敬请期待，更多功能即将上线，或注册我们的 {0}。"),
     ("Check for updates", "检查更新"),
+    ("Check the status of Docker services.", "检查 Docker 服务状态。"),  # deleted at version 4.44.3
+    ("Choose IDE", "选择 IDE"),  # deleted at version 4.44.3
+    (
+        "Choose Internet Protocol version for the Docker VM",
+        "为 Docker 虚拟机（VM）选择互联网协议版本",
+    ),  # deleted at version 4.44.3
     ("Choose Virtual Machine Manager (VMM)", "选择虚拟机管理器 (VMM)"),
     ("Choose a local image to run.", "选择要运行的本地镜像。"),
     ("Choose cluster provisioning method", "选择群集配置方法"),
     ("Choose container terminal", "选择容器终端"),
     ("Choose file sharing implementation for your containers", "为容器选择文件共享方式"),
     ("Choose how to configure the installation of Docker's CLI tools:", "选择如何配置 Docker 命令行工具的安装:"),
+    ("Choose source", "选择源"),  # deleted at version 4.44.3
     ("Choose theme for Docker Desktop", "选择应用主题"),
+    ("Choose your preferred WSL configuration: {0}", "选择你的 WSL 首选设置项: {0}"),  # deleted at version 4.44.3
     ("Chooses the network configuration and used for container communication.", "选择网络配置并用于容器通信。"),
     ("Clean / Purge data", "清除数据"),
     ("Clean / Purge data?", "清理/清除数据？"),
@@ -429,7 +530,14 @@ config = [
     ("Clear terminal", "清除缓冲区"),
     ("Clients", ""),
     ("Clone", "克隆"),
+    ("Clone & open", "克隆并打开"),  # deleted at version 4.44.3
+    ("Clone Git repository", "克隆 Git 存储库"),  # deleted at version 4.44.3
+    ("Clone Project", "克隆项目"),  # deleted at version 4.44.3
+    ("Clone Protocol", "克隆协议"),  # deleted at version 4.44.3
     ("Clone a volume", "复制卷"),
+    ("Clone git", "克隆 Git"),  # deleted at version 4.44.3
+    ("Clone git repository", "克隆 Git 存储库"),  # deleted at version 4.44.3
+    ("Clone project to folder", "克隆项目到文件夹"),  # deleted at version 4.44.3
     ("Clone the repository at {0}.", "克隆这个存储库 {0}"),
     ("Close", "关闭"),
     ("Close Application", "关闭应用"),
@@ -441,17 +549,24 @@ config = [
     ("Cloud engine name", "云引擎名称"),
     (
         "Cloud storage is exclusively available for business accounts. Contact your admin to be added to the business Docker account.",
-        "",
+        "云存储仅对企业账户开放。请联系你的管理员将你添加到企业 Docker 账户中。",
     ),
+    (
+        "Cloud storage is exclusively available for business accounts. Please contact your admin to be added to the business Docker account.",
+        "云存储仅对企业账户开放。请联系你的管理员将你添加到企业 Docker 账户中。",
+    ),  # deleted at version 4.44.3
     ("Cluster", "集群"),
-    ("Cluster IP", ""),
+    ("Cluster IP", "集群 IP"),
     ("Cluster settings", "集群设置"),
-    ("Cluster type", ""),
+    ("Cluster type", "集群类型"),
     ("Collaborate with your team", "与您的团队协作"),
     ("Columns", "列"),
     ("Command", "命令"),
     ("Command line: {0}", "命令行: {0}"),
+    ("Command to run", "要运行的命令"),  # deleted at version 4.44.3
+    ("Commands to execute before running the project", "运行项目前要执行的命令"),  # deleted at version 4.44.3
     ("Community", "社区"),
+    ("Community Forums", "社区论坛"),  # deleted at version 4.44.3
     ("Community extensions", "社区扩展"),
     (
         "Compare differences in vulnerabilities and packages of 2 images on the Docker Scout dashboard",
@@ -469,13 +584,22 @@ config = [
         "Compose Bridge 要求在 Docker Desktop 中启用 Kubernetes。安装需要几分钟时间，并且需要互联网连接。您可以在设置中随时禁用 Kubernetes。",
     ),
     (
+        "Compose V2 integrates with the Docker CLI and can be run as 'docker compose'. Checking this setting aliases '/usr/local/bin/docker-compose' to 'docker compose' for improved compatibility with other applications and scripts.",
+        "Compose V2 与 Docker 命令行集成，可以作为 'docker compose' 运行。选中此设置会将 '/usr/local/bin/docker-compose' 别名为 'docker compose'，以便与其他应用和脚本更好地兼容。",
+    ),  # deleted at version 4.44.3
+    (
         "Compose V2 integrates with the Docker CLI and can be run as 'docker\\n          compose'. Checking this setting aliases '/usr/local/bin/docker-compose'\\n          to 'docker compose' for improved compatibility with other applications\\n          and scripts.",
-        "",
+        "Compose V2 与 Docker 命令行集成，可以作为 'docker compose' 运行。\\n          选中此设置会将 '/usr/local/bin/docker-compose' \\n          别名为 'docker compose'，以便与其他应用和脚本更好地兼容。",
     ),
+    (
+        "Compose automatically uses {0} for bind mounts in Compose projects.",
+        "Compose 自动使用 {0} 用于 Compose 项目中的绑定挂载。",
+    ),  # deleted at version 4.44.3
     ("Compose concepts", "Compose 概念"),
     ("Compose file", "Compose 文件"),
     ("Compose file reference", "Compose 文件参考"),
     ("Compose file viewer", "Compose 文件查看器"),
+    ("Compose files", "Compose 文件"),  # deleted at version 4.44.3
     ("Compose for Agents", ""),
     (
         "Compose simplifies the control of your entire application stack, making it easy to manage services, networks, and volumes in a single, comprehensible YAML configuration file. Then, with a single command, you create and start all the services from your configuration file.",
@@ -485,13 +609,15 @@ config = [
     ("Config maps and secrets", ""),
     ("Config required", ""),
     ("ConfigFrom", "配置来自"),
+    ("ConfigFrom - Optional", "配置来自 - 可选"),  # deleted at version 4.44.3
     ("ConfigOnly", "仅配置"),
     ("Configuration", "配置"),
     ("Configuration{0}", "配置{0}"),
-    ("Configure", ""),
-    ("Configure MCP clients to execute your AI workloads", ""),
+    ("Configure", "配置"),
+    ("Configure MCP clients to execute your AI workloads", "配置 MCP 客户端以执行你的 AI 工作负载"),
     ("Configure additional options for your container.", "为你的容器配置其他选项。"),
     ("Configure and launch a new container.", "配置并启动新容器。"),
+    ("Configure how your project runs{0}", "配置你的项目如何运行{0}"),  # deleted at version 4.44.3
     ("Configure shell autocompletion:", "设置 shell 自动补全"),
     ("Configure shell completions", "配置 Shell 自动补全"),
     ("Configure the Docker daemon by typing a json Docker daemon configuration file", ""),
@@ -503,6 +629,7 @@ config = [
     ("Configure which WSL 2 distros you want to access Docker from.", "配置要从哪个 WSL 2 发行版访问 Docker。"),
     ("Configure your container ports", "配置容器端口"),
     ("Configure your containers and more", "配置你的容器以及更多"),
+    ("Configure your project", "配置你的项目"),  # deleted at version 4.44.3
     ("Confirm", "确认"),
     ("Conflicts", None),
     ("Connect", "连接"),
@@ -512,6 +639,7 @@ config = [
     ("Connect to builder", "连接到构建器"),
     ("Connect to cloud builder {0}", "连接到云构建器 {0}"),
     ("Connect to the internet before submitting a support ticket.", "提交支持工单前请连接到互联网。"),
+    ("Connected to Cloud: {0}", "连接到 Docker 云: {0}"),  # deleted at version 4.44.3
     ("Connecting to Docker {0}", "连接到 Docker {0} 中"),
     ("Connecting...", "连接中..."),
     ("Connection failed", "连接失败"),
@@ -531,9 +659,15 @@ config = [
     ("Container memory usage", "容器内存占用"),
     ("Container name", "容器名"),
     ("Container path", "容器路径"),
+    ("Container ports", "容器端口"),  # deleted at version 4.44.3
+    (
+        "Container slice integrity assumptions violated. Please inform the frontend platform team. Violations: {0}",
+        "容器切片违反了完整性假设。请通知前端平台团队。违反行为: {0}",
+    ),  # deleted at version 4.44.3
     ("Container to Docker host", "容器到 Docker 主机"),
     ("Container to container", "容器到容器"),
     ("Container to external internet host", "容器到外部互联网主机"),
+    ("Containerize my application", "容器化我的应用"),  # deleted at version 4.44.3
     ("Containerize your application", "容器化你的应用"),
     ("Containers", "容器"),
     ("Containers ({0})", "容器（{0}）"),
@@ -542,7 +676,7 @@ config = [
         "容器是运行任何代码的隔离环境。选择容器，然后转到 {0} 选项卡以查看其内容",
     ),
     ("Containers can use volumes to store data", "容器可以使用卷来存储数据"),
-    ("Containers can use volumes to store data on Docker {0}", ""),
+    ("Containers can use volumes to store data on Docker {0}", "容器可以在 Docker {0} 上使用卷来存储数据"),
     ("Containers in network", "网络中的容器"),
     ("Containers on Docker Desktop", "Docker Desktop 中的容器"),
     ("Content", "内容"),
@@ -569,6 +703,7 @@ config = [
     ("Copyright © 2015-2025 Docker Inc. All rights reserved.", "© 2015-2025 Docker 公司版权所有 。保留所有权利。"),
     ("Could not display information", "无法显示信息"),
     ("Create", "创建"),
+    ("Create a Dev Environment", "创建开发环境"),  # deleted at version 4.44.3
     ("Create a cloud engine", "创建一个云引擎"),
     (
         "Create a cloud-based Docker engine that feels just like your local engine and start harnessing the the power of the cloud today.",
@@ -581,8 +716,14 @@ config = [
     ),
     ("Create a container", "创建一个容器"),
     ("Create a file sync", "创建文件同步"),
+    (
+        "Create a fresh clone of a Git repository from an HTTPS or SSH URL. Pull Request URLs are also supported.",
+        "从 HTTPS 或 SSH URL 创建 Git 存储库克隆。也支持 Pull Request URL。",
+    ),  # deleted at version 4.44.3
     ("Create a new container", "创建新容器"),
+    ("Create a new environment", "创建新环境"),  # deleted at version 4.44.3
     ("Create a new image and copy the volume's contents into it.", "创建一个新的镜像并将卷的内容复制进去。"),
+    ("Create a singe-node cluster with kubeadm.", "使用 kubeadm 创建单节点集群。"),  # deleted at version 4.44.3
     ("Create a single-node cluster with kubeadm.", "使用 kubeadm 创建单节点集群。"),
     ("Create a volume", "创建卷"),
     ("Create an account{0}", "创建帐户{0}"),
@@ -590,9 +731,15 @@ config = [
     ("Create container", "创建容器"),
     ("Create dest path", "创建目标路径"),
     ("Create exception", "创建例外"),
+    ("Create failed", "创建失败"),  # deleted at version 4.44.3
     ("Create network", "创建网络"),
     ("Create profiles for development", "为开发创建配置文件"),
+    ("Create project", "创建项目"),  # deleted at version 4.44.3
     ("Create share", "创建共享"),
+    (
+        "Create the assets needed to run your existing application in a containerized environment.",
+        "创建在容器化环境中运行现有应用所需的资源。",
+    ),  # deleted at version 4.44.3
     ("Created", "已创建"),
     ("Created by", "创建者"),
     ("Created by:", "创建者:"),
@@ -607,11 +754,19 @@ config = [
         "创建 /var/run/docker.sock，某些第三方客户端可能会使用它与 Docker Desktop 进行通信。",
     ),
     (
+        "Creates /var/run/docker.sock which some third-party clients may use to communicate with Docker Desktop. {0}",
+        "创建 /var/run/docker.sock，某些第三方客户端可能会使用它与 Docker Desktop 进行通信。 {0}",
+    ),  # deleted at version 4.44.3
+    (
         "Creating a simple project for you to explore what Docker Desktop can do",
         "创建一个简单的项目来探索 Docker Desktop 可以做什么",
     ),
     ("Creation failed", "创建失败"),
     ("Current version", "当前版本"),
+    (
+        "Current version: {0} ({1}){2}New version: {3} ({4}){5}",
+        "当前版本: {0} ({1}){2}新版本: {3} ({4}){5}",
+    ),  # deleted at version 4.44.3
     ("Custom", "自定义"),
     ("Custom network name", "自定义网络名称"),
     ("Customize terminal appearance", "自定义终端外观"),
@@ -621,6 +776,7 @@ config = [
     ("DNS options to use.", "要使用的 DNS 选项。"),
     ("DNS search domains to use.", "要使用的 DNS 搜索域。"),
     ("DNS server to use.", "要使用的 DNS 服务器。"),
+    ("DURATION", "持续时间"),  # deleted at version 4.44.3
     ("Daemon socket(s) to connect to.", "要连接到的守护进程套接字。"),
     ("Daily", "每天"),
     ("Dark", "深色"),
@@ -637,8 +793,10 @@ config = [
     ("Day", "日"),
     ("Debug", None),
     ("Debug mode", "调试模式"),
+    ("Decline", "拒绝"),  # deleted at version 4.44.3
     ("Deep-dive into core Docker concepts", "深入研究核心 Docker 概念"),
     ("Default", "默认"),
+    ("Default Engine", "默认引擎"),  # deleted at version 4.44.3
     ("Default IP when binding container ports.", "绑定容器端口时的默认 IP。"),
     ("Default OCI runtime for containers.", "容器的默认 OCI 运行时。"),
     ("Default driver for container logs.", "容器日志的默认驱动。"),
@@ -646,7 +804,13 @@ config = [
     ("Default network options applied to custom networks when they're created", "创建自定义网络时的默认网络选项"),
     ("Default networking mode", "默认网络模式"),
     ("Define checks to determine if your service healthy", "定义检查以确定你的服务是否健康"),
+    ("Define how your project runs", "定义你的项目如何运行"),  # deleted at version 4.44.3
     ("Define which network is your service included in", "定义你的服务包含在哪个网络中"),
+    (
+        "Define your project's configuration as code, distribute your project easily amongst your team, and have everyone work on the same code and any dependencies with one click.",
+        "将项目配置定义为代码，轻松在团队中分发项目，并让每个人只需点击一下就能在同样的代码和任何依赖项上工作。",
+    ),  # deleted at version 4.44.3
+    ("Define. Distribute. Iterate.", "定义。分发。迭代。"),  # deleted at version 4.44.3
     ("Defines the scope of the network", "定义网络的作用域"),
     ("Defining and running multi-container Docker applications", "定义和运行多容器 Docker 应用"),
     ("Definition ID", "定义 ID"),
@@ -661,7 +825,9 @@ config = [
     ("Delete everything and restart", "删除所有数据并重启"),
     ("Delete history?", "删除历史?"),
     ("Delete model", "删除模型"),
+    ("Delete model?", "删除模型？"),  # deleted at version 4.44.3
     ("Delete network", "删除网络"),
+    ("Delete project", "删除项目"),  # deleted at version 4.44.3
     ("Delete resources to reclaim space", "删除资源以释放空间"),
     ("Delete resources to reclaim space?", "删除资源以释放空间？"),
     ("Delete tag", "删除标签"),
@@ -680,6 +846,7 @@ config = [
     ("Depends On", "依赖于"),
     ("Deploy", "部署"),
     ("Deploy configurations files to services", "将配置文件部署到服务"),
+    ("Deploy the Kubernetes Dashboard into cluster", "将 Kubernetes 仪表板部署到集群中"),  # deleted at version 4.44.3
     ("Deployments", "部署"),
     ("Describe what should happen under normal conditions.", "描述在正常情况下应该发生什么。"),
     ("Description", "描述"),
@@ -693,11 +860,13 @@ config = [
         "详细说明实际上发生了什么，包括任何错误消息或问题。",
     ),
     ("Details", "详情"),
+    ("Details page for unpublished extension", "未发布扩展的详细信息页面"),  # deleted at version 4.44.3
     ("Detected shell: {0}", "检测到 Shell: {0}"),
     (
         "Determines which terminal is launched when opening the terminal from a container.",
         "确定从容器打开终端时启动哪个终端",
     ),
+    ("Dev Environments", "开发环境"),  # deleted at version 4.44.3
     ("Develop", "开发"),
     ("Develop in your containers", "在你的容器中开发"),
     ("Develop the app", "开发应用"),
@@ -721,6 +890,7 @@ config = [
     ("Disconnect container", "断开容器连接"),
     ("Disconnect container from network?", "断开容器与网络的连接？"),
     ("Disconnect containers from network?", "断开容器与网络的连接？"),
+    ("Disconnect from Docker Cloud", "从 Docker 云断开连接"),  # deleted at version 4.44.3
     ("Discover its features and benefits and see how it streamlines your development in the cloud.", ""),
     ("Disk image location", "磁盘镜像位置"),
     ("Disk read/write", "磁盘读/写"),
@@ -730,9 +900,24 @@ config = [
     ("Disk: {0} used (limit {1})", "磁盘:已使用 {0} （限制 {1}）"),
     ("Dismiss", "关闭"),
     ("Dismiss all", "全部关闭"),
+    (
+        "Display the Dev Environments view in the Docker Dashboard. {0}",
+        "在 Docker 面板中显示开发环境视图。{0}",
+    ),  # deleted at version 4.44.3
     ("Do not allow", "不允许"),
     ("Do you want to continue?", "是否继续?"),
     ("Do you want to save changes to {0}?", "你想要保存对 {0} 的更改吗？"),
+    ("Docker", None),  # deleted at version 4.44.3
+    ("Docker AI Supplemental Terms", "Docker AI 补充条款"),  # deleted at version 4.44.3
+    (
+        "Docker AI provides advanced capabilities to help optimize your workflows. To enable these features, you must agree to the {0}, which explain how your data will be processed, stored, and used by Docker’s AI services.",
+        "Docker AI 提供了高级功能来帮助优化您的工作流。要启用这些功能，您必须同意 {0}，它解释了您的数据将如何被 Docker AI 服务处理、存储和使用。",
+    ),  # deleted at version 4.44.3
+    (
+        "Docker AI provides advanced capabilities to help optimize your workflows. To enable these features, you must agree to the {0}, which explain how your data will be processed, stored, and used by Docker’s AI services. Review these terms carefully before proceeding.",
+        "Docker AI 提供了高级功能来帮助优化您的工作流。要启用这些功能，您必须同意 {0}，它解释了您的数据将如何被 Docker AI 服务处理、存储和使用。在继续之前请仔细阅读这些条款。",
+    ),  # deleted at version 4.44.3
+    ("Docker AI terms", "Docker AI 条款"),  # deleted at version 4.44.3
     (
         "Docker AI wants to paste a command into your Docker Desktop terminal.",
         "Docker AI 希望将命令粘贴到你的 Docker Desktop 终端中。",
@@ -774,13 +959,18 @@ config = [
     ("Docker Desktop development tools", "Docker Desktop 开发工具"),
     (
         "Docker Desktop has encountered an unexpected error and needs to close, but was unable to gather information about the error that has occurred due to an internal problem. This most likely means that the services supporting Docker Desktop have exited unexpectedly.\\n\\n Restart Docker Desktop and try again. If the issue persists, [collect diagnostics and submit an issue](https://docs.docker.com/desktop/troubleshoot/overview/#diagnose-from-the-terminal).",
-        "",
+        "Docker Desktop 遇到了一个意外错误并需要关闭，但由于内部问题无法收集相关错误信息。这很可能意味着 Docker Desktop 服务已意外退出。\\n\\n重启 Docker Desktop 并重试。如果问题仍然存在，请[收集诊断信息并提交问题](https://docs.docker.com/desktop/troubleshoot/overview/#diagnose-from-the-terminal)。",
     ),
+    (
+        "Docker Desktop has encountered an unexpected error and needs to close, but was unable to gather information about the error that has occurred due to an internal problem.\\n\\nThis most likely means that the services supporting Docker Desktop have exited unexpectedly.\\n\\n Restart Docker Desktop and try again. If the issue persists, [collect diagnostics and submit an issue](https://docs.docker.com/desktop/troubleshoot/overview/#diagnose-from-the-terminal).",
+        "Docker Desktop 遇到了一个意外错误并需要关闭，但由于内部问题无法收集相关错误信息。\\n\\n这很可能意味着 Docker Desktop 服务已意外退出。\\n\\n重启 Docker Desktop 并重试。如果问题仍然存在，请[收集诊断信息并提交问题](https://docs.docker.com/desktop/troubleshoot/overview/#diagnose-from-the-terminal)。",
+    ),  # deleted at version 4.44.3
     (
         "Docker Desktop installs a local instance of {0} to establish a connection to the cloud. You can then use the builder by running a build as normal.",
         "Docker Desktop 安装 {0} 的本地实例以建立与云的连接。然后你可以像往常一样使用该构建器来运行构建。",
     ),
     ("Docker Desktop regularly checks:", "Docker Desktop 定期检查:"),
+    ("Docker Desktop starting...", "Docker Desktop 启动中..."),  # deleted at version 4.44.3
     ("Docker Desktop uninstalled successfully", "Docker Desktop 成功卸载"),
     ("Docker Desktop with a cloud toggle button at the top", ""),
     (
@@ -788,6 +978,7 @@ config = [
         "Docker Desktop {0} ({1}) 已经是最新版本。",
     ),
     ("Docker Dev Cloud", ""),
+    ("Docker Dev Environment", "Docker 开发环境"),  # deleted at version 4.44.3
     ("Docker Engine", "Docker 引擎"),
     ("Docker Engine is paused", "Docker 引擎已暂停"),
     ("Docker Engine is the underlying technology that runs containers", "Docker 引擎是运行容器的底层技术"),
@@ -799,6 +990,9 @@ config = [
     ("Docker Home", "Docker 主页"),
     ("Docker Hub", None),
     ("Docker Model Runner", ""),
+    ("Docker Project", "Docker 项目"),  # deleted at version 4.44.3
+    ("Docker Projects illustrations", "Docker 项目插图"),  # deleted at version 4.44.3
+    ("Docker Projects run command illustration", "Docker 项目运行命令插图"),  # deleted at version 4.44.3
     ("Docker Scout", None),
     ("Docker Scout Free", "Docker Scout 免费版"),
     ("Docker Scout indexing has been disabled. {0}", "Docker Scout 索引已被禁用。{0}"),
@@ -854,16 +1048,20 @@ config = [
     ("Docker {0} is not enabled for {1}.", ""),
     ("Docker {0} is started and waiting for activity to connect.", ""),
     ("Docker {0} unavailable", ""),
-    ("Docker {0}{1} {2} ({3})", ""),
+    ("Docker {0}{1} {2} ({3})", None),
     ("Dockerfile", None),
     ("Dockerfile content", "Dockerfile 内容"),
     ("Dockerfile reference", "Dockerfile 参考"),
     ("Dockhand tools", ""),
+    ("Docs", "文档"),  # deleted at version 4.44.3
     ("Docs ({0})", "文档（{0}）"),
+    ("Document vulnerability exceptions", "记录漏洞例外情况"),  # deleted at version 4.44.3
     ("Documentation", "文档"),
     ("Don't ask again", "不再询问"),
+    ("Don't override", "不覆盖"),  # deleted at version 4.44.3
     ("Don't save", "不保存"),
     ("Don't show this message again", "不再显示此消息"),
+    ("Done", "完成"),  # deleted at version 4.44.3
     ("Download", "下载"),
     ("Download as Jaeger format", "以 Jaeger 格式下载"),
     ("Download as OTLP format", "以 OTLP 格式下载"),
@@ -881,10 +1079,17 @@ config = [
     ("Driver: {0}", "驱动: {0}"),
     ("Dual IPv4/IPv6", ""),
     ("Duration", "持续时间"),
+    ("EPSS Score", "EPSS 分数"),  # deleted at version 4.44.3
     ("EPSS Score:", "EPSS 分数:"),
     ("ERROR", "错误"),
     ("ESC", None),
+    (
+        "Easily access logs, manage files, and oversee networks － everything for a seamless Docker workflow in one place",
+        "轻松访问日志、管理文件和监督网络 —— 所有这些都集中在一个无缝的 Docker 工作流中",
+    ),  # deleted at version 4.44.3
+    ("Easily run and manage all your Docker projects", "轻松运行和管理所有的 Docker 项目"),  # deleted at version 4.44.3
     ("Edit", "变基"),
+    ("Edit command", "编辑命令"),  # deleted at version 4.44.3
     ("Edit exception", "编辑例外"),
     ("Edit file", "编辑文件"),
     ("Effortlessly backup, clone, restore, and share Docker volumes", "轻松备份、克隆、恢复和共享 Docker 卷"),
@@ -902,11 +1107,17 @@ config = [
     ("Empty volume", "清空卷"),
     ("Enable", "启用"),
     ('Enable "Ask Gordon" feature in Docker Desktop and CLI.', '在 Docker Desktop 和 CLI 中启用"问 Gordon"功能。'),
+    (
+        'Enable "Ask Gordon" feature in Docker Desktop and CLI. {0}',
+        '在 Docker Desktop 和命令行中启用 "问 Gordon" 功能。{0}',
+    ),  # deleted at version 4.44.3
     ('Enable "MCP Toolkit" feature in Docker Desktop and CLI.', "在 Docker Desktop 和 CLI 中启用 MCP Toolkit 功能。"),
     ("Enable 'docker-compose' CLI alias", "启用 'docker-compose' 命令行别名"),
     ("Enable Ask Gordon", '启用"问 Gordon"'),
+    ("Enable Compose Bridge command line", "启用 Compose Bridge 命令行"),  # deleted at version 4.44.3
     ("Enable Debug mode", "启用调试模式"),
     ("Enable Docker AI", "启用 Docker AI"),
+    ("Enable Docker AI {0}", "启用 Docker AI {0}"),  # deleted at version 4.44.3
     ("Enable Docker Debug by default", "默认启用 Docker Debug"),
     ("Enable Docker Extensions", "启用 Docker 扩展"),
     ("Enable Docker MCP Toolkit", "启用Dockers MCP工具包"),
@@ -926,6 +1137,7 @@ config = [
         "在 /var/run/docker.sock 和 model-runner.docker.internal:80 上启用 GPU 加速的推理引擎。\\n注意：推理引擎功能支持可能需要几分钟时间进行初始化。",
     ),
     ("Enable GPU-backed inference", "启用 GPU 加速推理。"),
+    ("Enable Gordon", "启用 Gordon"),  # deleted at version 4.44.3
     ("Enable HCS Engine", "启用 HCS 引擎"),
     ("Enable IP masquerading.", "启用 IP 伪装。"),
     ("Enable IPv6 networking.", "启用 IPv6 网络。"),
@@ -938,6 +1150,7 @@ config = [
     ("Enable Wasm, requires the {0}", "启用 Wasm，需要 {0}"),
     ("Enable addition of iptables rules.", "启用 iptables 规则添加。"),
     ("Enable and restart", "启用并重启"),
+    ("Enable background SBOM indexing", "启用后台 SBOM 索引"),  # deleted at version 4.44.3
     ("Enable background Scout SBOM indexing", "启用后台 Scout SBOM 索引"),
     ("Enable background indexing in Settings", "在设置中启用后台索引"),
     ("Enable containerd", "启用 containerd"),
@@ -945,6 +1158,7 @@ config = [
     ("Enable experimental features.", "启用实验性功能"),
     ("Enable host networking", "启用主机网络（Host）"),
     ("Enable host-side TCP support", "启用主机端 TCP 支持。"),
+    ("Enable image SBOM indexing.", "启用镜像 SBOM 索引。"),  # deleted at version 4.44.3
     ("Enable image analysis with Scout", "启用 Scout 镜像分析"),
     ("Enable insecure registry communication.", "启用不安全的注册表通信。"),
     ("Enable integration with additional distros:", "启用与其他发行版的集成:"),
@@ -977,11 +1191,25 @@ config = [
         "引擎内存占用。包含容器占用和其他间接占用。",
     ),
     ("Engine type", "引擎类型"),
-    ("Enhance security by preventing containers from breaching the Linux VM.", ""),
+    (
+        "Enhance security by preventing containers from breaching the Linux VM.",
+        "通过防止容器破坏 Linux 虚拟机（VM）来增强安全性。",
+    ),
+    (
+        "Enhance security by preventing containers from breaching the Linux VM. {0}",
+        "通过防止容器破坏 Linux 虚拟机（VM）来增强安全性。{0}",
+    ),  # deleted at version 4.44.3
+    (
+        "Enhanced Container Isolation on WSL requires WSL 2 version 1.1.3.0 or above",
+        "WSL 上的增强容器隔离需要 WSL 2 版本 1.1.3.0 或更高版本",
+    ),  # deleted at version 4.44.3
+    ("Enter a project name below", "请输入下方的项目名称"),  # deleted at version 4.44.3
     ("Enter a valid email address.", "输入有效的电子邮箱。"),
     ("Enter the following command:", "输入以下命令:"),
+    ("Enter your prompt", "输入你的提示"),  # deleted at version 4.44.3
     ("Enter your task", "输入你的任务"),
     ("Enter “0” to assign randomly generated host ports.", "输入 “0” 以分配随机生成的主机端口。"),
+    ("Env", "环境"),  # deleted at version 4.44.3
     ("Environment", "环境"),
     ("Environment Files", "环境文件"),
     ("Environment Variables", "环境变量"),
@@ -989,6 +1217,11 @@ config = [
     ("Environment variables in your container", "容器中的环境变量"),
     ("Environmental variables", "环境变量"),
     ("Error", None),
+    (
+        "Error loading README. Re-open project to try again.",
+        "加载 README 时出错。重新打开项目重试。",
+    ),  # deleted at version 4.44.3
+    ("Error loading image: {0}{1}", "加载镜像时出错: {0}{1}"),  # deleted at version 4.44.3
     ("Error loading toolbox", "加载工具箱时出错"),
     ("Error when saving", "保存时出错"),
     ("Error while fetching extensions", "获取扩展时出错"),
@@ -1011,6 +1244,7 @@ config = [
     ),
     ("Example", "示例"),
     ("Example: registry-1.docker.com,*.docker.com,10.0.0.0/8", "示例: registry-1.docker.com,*.docker.com,10.0.0.0/8"),
+    ("Exception applied", "已应用的例外"),  # deleted at version 4.44.3
     ("Exception type", "例外类型"),
     ("Exceptions", "例外"),
     (
@@ -1018,12 +1252,28 @@ config = [
         "例外指的是在你的镜像中识别出并故意从修复措施中排除的漏洞。{0}",
     ),
     ("Exclude patterns", "排除模式"),
+    ("Exec", "执行"),  # deleted at version 4.44.3
+    ("Exec in CLI", "在命令行中运行"),  # deleted at version 4.44.3
+    ("Execute", "执行"),  # deleted at version 4.44.3
+    ("Existing Git repo", "现有 Git 存储库"),  # deleted at version 4.44.3
     ("Exit Terminal", "退出终端"),
+    ("Expand", "展开"),  # deleted at version 4.44.3
     ("Expected behavior", "预期行为"),
+    ("Experimental", "实验性"),  # deleted at version 4.44.3
     ("Experimental Features", "实验性功能"),
     ("Experimental features", "实验性功能"),
+    (
+        "Experimental features can be discontinued without notice. {0}",
+        "实验性功能可能在没有通知的情况下停用。{0}",
+    ),  # deleted at version 4.44.3
+    ("Explain my Dockerfile", "解释我的 Dockerfile"),  # deleted at version 4.44.3
+    (
+        "Exploit Prediction Scoring System predicts the likelihood of a vulnerability being exploited, helping you prioritize security fixes",
+        "漏洞利用预测评分系统（EPSS）预测漏洞被利用的可能性，帮助你优先处理安全修复",
+    ),  # deleted at version 4.44.3
     ("Explore Docker {0}", "探索 Docker {0}"),
     ("Explore and manage your Docker experience.", "探索和管理你的 Docker 体验。"),
+    ("Explore image on GitHub", "在 GitHub 上探索镜像"),  # deleted at version 4.44.3
     ("Explore our {0} category.", "探索我们的 {0} 类别。"),
     ("Explore recommended fixes to reduce your vulnerability count", "探索建议的修复程序以减少漏洞数量"),
     ("Explore the container", "探索容器"),
@@ -1048,9 +1298,12 @@ config = [
     ("Extra hosts", ""),
     ("FORMAT", ""),
     ("FREE", "免费版"),
+    ("FROM {0}", None),  # deleted at version 4.44.3
     ("Factory reset", "恢复出厂设置"),
+    ("Failed", "已失败"),  # deleted at version 4.44.3
     ("Failed to fetch image analysis", "获取镜像分析失败"),
     ("Failed to find installed WSL 2 distros.", "未能找到已安装的 WSL 2 发行版。"),
+    ("Failed to load layers", "加载层失败"),  # deleted at version 4.44.3
     ("Failed to load volumes", "加载卷（volume）失败"),
     ("Failed to retrieve latest volume size.", "无法检索最新的卷大小。"),
     ("Failed to start Docker Desktop", "Docker Desktop 启动失败"),
@@ -1063,6 +1316,8 @@ config = [
     ("False positive", "误报"),
     ("Feature", "功能"),
     ("Feature flags", "功能标志"),
+    ("Featured", None),  # deleted at version 4.44.3
+    ("Features in development", "开发中的功能"),  # deleted at version 4.44.3
     (
         "Fetch nightly builds instead of released builds when checking for updates.",
         "在检查更新时获取夜间构建版本而不是正式版本。",
@@ -1102,10 +1357,14 @@ config = [
     ("Finish", "完成"),
     ("Finish setting up Docker Desktop", "完成 Docker Desktop 设置"),
     ("Fix", "修复"),
+    ("Fix this CVE in base image:", "在基础镜像中修复此漏洞:"),  # deleted at version 4.44.3
+    ("Fix version", "修复版本"),  # deleted at version 4.44.3
     ("Fix version:", "修复版本:"),
     ("Fixable", "可修复"),
     ("Flag", "标志"),
     ("Flags", "标志"),
+    ("Focus this window", "聚焦此窗口"),  # deleted at version 4.44.3
+    ("Folder path template", "文件夹路径模板"),  # deleted at version 4.44.3
     ("Follow symlinks", "跟随符号链接"),
     ("Font family", "字体"),
     ("Font size", "字体大小"),
@@ -1141,12 +1400,14 @@ config = [
         "Get CLI hints and tips when running Docker commands in the CLI.",
         "在命令行中运行 Docker 命令时获取命令行提示和技巧。",
     ),
+    ("Get Started", "开始使用"),  # deleted at version 4.44.3
     (
         "Get actionable remediation suggestions and learn how to fix {0} CVEs",
         "获取可操作的补救建议并学习如何修复 {0} 个漏洞",
     ),
     ("Get an image", "获取镜像"),
     ("Get diagnostics ID", "获取诊断 ID"),
+    ("Get help from the community.", "从社区获得帮助。"),  # deleted at version 4.44.3
     ("Get help with Docker Desktop.", "获取 Docker Desktop 相关帮助。"),
     ("Get personalized support from the Docker Team", "从 Docker 团队获得个性化支持"),
     ("Get started with AI/ML using Docker", "在 Docker 中开始使用 AI/ML"),
@@ -1162,6 +1423,8 @@ config = [
     ("Getting started", "入门"),
     ("Getting started{0}", "入门{0}"),
     ("Gigabytes", "GB"),
+    ("Git", None),  # deleted at version 4.44.3
+    ("Git not installed", "Git 未安装"),  # deleted at version 4.44.3
     ("GitHub repository", "Github 存储库"),
     ("Give feedback", "提供反馈"),
     ("Give feedback{0}", "提供反馈{0}"),
@@ -1188,12 +1451,14 @@ config = [
         "Gordon needs access to the files in the corresponding directory to be able to help.",
         "Gordon 需要访问相应目录中的文件才能提供帮助。",
     ),
+    ("Gordon needs to know where to look for files.", "Gordon 需要知道在哪里寻找文件。"),  # deleted at version 4.44.3
     ("Got it", "明白了"),
     ("Group for the unix socket.", "Unix 套接字的组"),
     ("HCS", None),
     ("HCS is an experimental backend for Docker Desktop.", "HCS 是 Docker Desktop 的实验性后端。"),
     ("HTTP request failed with status {0}", "HTTP 请求失败，状态 {0}"),
     ("HTTP {0}: {1}", None),
+    ("HTTPS", None),  # deleted at version 4.44.3
     ("Halted", None),
     ("Have your administrator upgrade your plan", "请您的管理员升级您的计划"),
     (
@@ -1205,6 +1470,7 @@ config = [
     ("Helpful", "有用"),
     ("Hidden features are likely to be obsolete or uninteresting.", "已隐藏的功能很可能是过时的或无趣的。"),
     ("Hide", "隐藏"),
+    ("Hide advanced options", "隐藏高级选项"),  # deleted at version 4.44.3
     ("Hide all", "全部隐藏"),
     ("Hide exception details", "隐藏例外情况详情"),
     ("Hide this vulnerability:", "隐藏此漏洞:"),
@@ -1212,8 +1478,16 @@ config = [
     ("History", "历史"),
     ("Host", None),
     (
+        "Host networking allows containers that are started with --net=host to use localhost to connect to TCP and UDP services on the host. It will automatically allow software on the host to use localhost to connect to TCP and UDP services in the container.",
+        "主机网络允许以 --net=host 启动的容器使用 localhost 连接到主机上的 TCP 和 UDP 服务。它将自动允许主机上的软件使用 localhost 连接到容器中的 TCP 和 UDP 服务。",
+    ),  # deleted at version 4.44.3
+    (
+        "Host networking allows containers that are started with --net=host to use localhost to connect to TCP and UDP services on the host. It will automatically allow software on the host to use localhost to connect to TCP and UDP services in the container. Sign in required.",
+        "主机网络允许以 --net=host 启动的容器使用 localhost 连接到主机上的 TCP 和 UDP 服务。它将自动允许主机上的软件使用 localhost 连接到容器中的 TCP 和 UDP 服务。需要登录。",
+    ),  # deleted at version 4.44.3
+    (
         "Host networking allows containers that are started with --net=host use localhost to connect to TCP and UDP services on the host. It will automatically allow software on the host to use localhost to connect to TCP and UDP services in the container.",
-        "",
+        "主机网络允许以 --net=host 启动的容器使用 localhost 连接到主机上的 TCP 和 UDP 服务。它将自动允许主机上的软件使用 localhost 连接到容器中的 TCP 和 UDP 服务。",
     ),
     (
         "Host networking is disabled. To enable host networking, navigate to {0} -> {1} -> {2} -> {3} checkbox.",
@@ -1222,13 +1496,18 @@ config = [
     ("Host networking is disabled. {0}", "主机网络已禁用。{0}"),
     ("Host path", "主机路径"),
     ("Host port", "主机端口"),
+    ("Host ports", "主机端口"),  # deleted at version 4.44.3
     ("Hosts", "主机"),
     ("How bind mounts work", "绑定挂载（bind mount）是如何工作的"),
+    ("How do I run Redis?", "我如何运行 Redis？"),  # deleted at version 4.44.3
     ("How do I run a container?", "如何运行容器？"),
     ("How to access Advanced image analysis", "如何访问高级镜像分析"),
     ("How volumes work", "卷（volume）是如何工作的"),
+    ("How would you rate your experience here today?", "你今天在这里的体验如何评价？"),  # deleted at version 4.44.3
+    ("How's everything going?", "一切进展如何？"),  # deleted at version 4.44.3
     ("Hub images", "Hub 镜像"),
     ("Hub private repos", "Hub 私有库"),
+    ("Hub repositories", "Hub 存储库"),  # deleted at version 4.44.3
     ("Hyper-V", None),
     ("HyperKit", None),
     ("ID", None),
@@ -1244,11 +1523,15 @@ config = [
     ("IPAM driver", "IPAM 驱动"),
     ("IPC Log - Docker Desktop", "IPC 日志 - Docker Desktop"),
     ("IPC monitor", "IPC 监控器"),
+    ("IPV4 gateway", "IPV4 网关"),  # deleted at version 4.44.3
+    ("IPV4 gateway: ", "IPV4 网关:"),  # deleted at version 4.44.3
+    ("IPV4 subnet", "IPV4 子网"),  # deleted at version 4.44.3
     ("IPv4 Address", "IPv4 地址"),
     ("IPv4 gateway", "IPv4 网关"),
     ("IPv4 gateway: ", "IPv4 网关:"),
     ("IPv4 network configuration", "IPv4 网络配置"),
     ("IPv4 only", "仅 IPv4"),
+    ("IPv4 only (legacy)", "仅 IPv4（旧版）"),  # deleted at version 4.44.3
     ("IPv4 subnet", "IPv4 子网"),
     ("IPv4 subnet for fixed IPs.", "固定 IP 的 IPv4 子网。"),
     ("IPv6", None),
@@ -1258,6 +1541,10 @@ config = [
     ("IPv6 address: ", "IPv6 地址:"),
     ("IPv6 gateway", "IPv6 网关"),
     ("IPv6 gateway: ", "IPv6 网关:"),
+    (
+        "IPv6 is the newest version of the Internet Protocol suite, proposed in {0} in 1998 (and later updated in {1} in 2017). During the transitional period while IPv6 is rolling out, apps should be designed to work with both IPv4 and IPv6. Note this configures the Docker VM, not the Docker engine or containers.",
+        "IPv6 是互联网协议套件的最新版本，于 1998 年在 {0} 提出（并在 2017 年于 {1} 更新）。在 IPv6 推出的过渡期内，应用程序应设计为既支持 IPv4 又支持 IPv6。注意，这配置的是 Docker 虚拟机（VM），而不是 Docker 引擎或容器。",
+    ),  # deleted at version 4.44.3
     ("IPv6 network configuration", "IPv6 网络配置"),
     ("IPv6 only", "仅 IPv6"),
     ("IPv6 subnet", "IPv6 子网"),
@@ -1269,6 +1556,10 @@ config = [
         "If containers in a network aren't running, they won't appear in the visualizer. To see all network connections, start the relevant containers.",
         "如果网络中的容器没有运行，则它们不会显示在可视化工具中。要查看所有网络连接，请启动相关的容器。",
     ),
+    (
+        "If you are not using Docker for work purposes, and believe this is a mistake, {0} to get unblocked.",
+        "如果您没有将 Docker 作为商业用途使用，并认为这是一个错误，{0} 以得到解锁。",
+    ),  # deleted at version 4.44.3
     (
         "If you are using docker compose, rebuild using the pull flag:",
         "如果你正在使用 docker compose，请使用拉取（pull）重新构建:",
@@ -1308,11 +1599,14 @@ config = [
     ("Image", "镜像"),
     ("Image ID", "镜像 ID"),
     ("Image details view", "镜像详情视图"),
+    ("Image hierarchy", "镜像层级结构"),  # deleted at version 4.44.3
     ("Image layer {0}", "镜像层 {0}"),
     ("Image layers", "镜像层"),
     ("Image may have poor performance, or fail, if run via emulation", "如果通仿真拟运行，镜像可能性能较差或失败"),
     ("Image name", "镜像名"),
+    ("Image options", "镜像选项"),  # deleted at version 4.44.3
     ("Images", "镜像"),
+    ("Images ", "镜像"),  # deleted at version 4.44.3
     ("Images ({0})", "镜像（{0}）"),
     (
         "Images are defined with the help of a Dockerfile that's usually in your application's root directory",
@@ -1325,6 +1619,7 @@ config = [
     ("Images not used by any running or stopped containers.", "镜像没有被任何运行中或已停止的容器使用。"),
     ("Images view", "镜像视图"),
     ("Import", "导入"),
+    ("Import a git repository", "导入 Git 存储库"),  # deleted at version 4.44.3
     ("Import a local file, an image, or pull content from cloud.", "导入本地文件、镜像或从云端拉取。"),
     ("Import builds", "导入构建"),
     ("Import builds to view in Docker Desktop.{0}", "导入构建以在 Docker Desktop 中查看。{0}"),
@@ -1335,6 +1630,10 @@ config = [
         "在 Docker Desktop 中，你现在应该有两个运行中的容器（ {0} 和 {1} ）。要查看前端，请在 {2}  中展开应用，然后选择指向 {3} 的链接。",
     ),
     ("In Use", None),
+    (
+        "In each release, we may add features that we are currently experimenting with. These features are in the early stages of the product development lifecycle. This allows us to get early feedback and adjust the features as we work on them, so that we create experiences that our users love. If you turn this off, you lose access to experimental features.",
+        "在每个版本中，我们可能会添加一些实验性功能。这些功能处于产品开发生命周期的早期阶段，这使我们能够尽早获得反馈并调整功能，以便我们创造用户喜欢的体验。如果关闭此功能，则无法访问实验功能。",
+    ),  # deleted at version 4.44.3
     (
         "In this guide, you create an image using a Dockerfile and a sample application.",
         "在该指南中，你将使用 Dockerfile 和示例应用程序创建一个镜像。",
@@ -1370,6 +1669,7 @@ config = [
     ("Inspect and manage your builders. {0}", "检查和管理您的构建器。{0}"),
     ("Inspect request", "检查请求"),
     ("Install", "安装"),
+    ("Install tester extension", "安装测试扩展"),  # deleted at version 4.44.3
     ("Installation progress - {0}", "安装进度 - {0}"),
     ("Installation takes a few minutes and requires an internet connection.", "安装需要几分钟，并且需要网络连接。"),
     ("Installation/upgrade issues", "安装/升级问题"),
@@ -1412,8 +1712,12 @@ config = [
     ),
     (
         "It seems there were some problems when trying to load Desktop Extensions. Close the window and try again later.",
-        "",
+        "尝试加载 Desktop 扩展时似乎出现了一些问题。关闭窗口后重试。",
     ),
+    (
+        "It seems there were some problems when trying to load Desktop Extensions. Please close the window and try again later.",
+        "尝试加载 Desktop 扩展时似乎出现了一些问题。请关闭窗口后重试。",
+    ),  # deleted at version 4.44.3
     (
         "It's not possible to compute history for builds that can't be identified. It usually means that the build does not have VCS information and local state available to compute its identity to link related builds.",
         "不能计算未识别的构建历史记录。这通常意味着该构建没有 VCS 信息和可用的本地状态以计算其链接相关构建的标识。",
@@ -1427,6 +1731,7 @@ config = [
     ("Join the Beta", "加入 Beta 版"),
     ("Justification", "理由"),
     ("Justification:", "理由:"),
+    ("Key", None),  # deleted at version 4.44.3
     ("Known issue", "已知问题"),
     ("Kubeadm", None),
     ("Kubernetes", None),
@@ -1436,6 +1741,7 @@ config = [
     ("Kubernetes version", "Kubernetes 版本"),
     ("Kubernetes {0}", None),
     ("LAST PUSHED", "最后推送"),
+    ("LATENCY", "延迟"),  # deleted at version 4.44.3
     ("LEARN MORE ABOUT", "了解更多关于"),
     (
         "Labels are user-defined metadata that can be attached to your image. They provide a way to annotate and organize your images with custom key-value pairs, making it easier to manage and search for specific images. {0}",
@@ -1450,14 +1756,17 @@ config = [
     ("Last updated", "最后更新"),
     ("Last updated on", "最后更新于"),
     ("Launch Dashboard", "启动仪表板"),
+    ("Layers {0}", "层级（Layers）{0}"),  # deleted at version 4.44.3
     ("Layers {0}{1}", "层级（Layers）{0}{1}"),
     ("Learn about Compose concepts", "了解 Compose 概念"),
     ("Learn about Docker Scout", "了解 Docker Scout"),
+    ("Learn about Projects", "了解项目"),  # deleted at version 4.44.3
     ("Learn about new Docker plans", "了解新的 Docker 计划"),
     (
         "Learn how to start building your own Docker Extensions from our DockerCon 2022 talk that walks you through the Docker Extension development process.",
         "从我们的 DockerCon 2022 讲座中了解如何开始构建自己的 Docker 扩展，该讲座将引导您完成 Docker 扩展开发过程。",
     ),
+    ("Learn how to use Docker.", "学习如何使用 Docker。"),  # deleted at version 4.44.3
     ("Learn more", "了解更多"),
     ("Learn more about Docker Scout", "了解有关 Docker Scout 的更多信息。"),
     ("Learn more about how we trigger notifications.", "详细了解我们如何触发通知。"),
@@ -1467,13 +1776,27 @@ config = [
     ("Least pulls", "最少拉取"),
     ("Legal terms", "法律条款"),
     ("Let workloads use cloud GPUs if available.", ""),
-    ("Lets you resolve *.docker.internal DNS names from both the host and your containers.", ""),
+    (
+        "Lets you resolve *.docker.internal DNS names from both the host and your containers.",
+        "允许您从主机和容器中解析 *.docker.internal DNS 名称。",
+    ),
+    (
+        "Lets you resolve *.docker.internal DNS names from both the host and your containers. {0}",
+        "允许您从主机和容器中解析 *.docker.internal DNS 名称。{0}",
+    ),  # deleted at version 4.44.3
     (
         "Leverage the power and flexibility of the cloud during development, without compromising your local development experience. {0}",
         "利用云的力量和灵活性进行开发，同时不损害你的本地开发体验。{0}",
     ),
+    ("License: ", "许可:"),  # deleted at version 4.44.3
     ("Light", "浅色"),
+    (
+        "Limit to the amount of disk space the engine can use, including overheads.",
+        "限制引擎可以使用的磁盘空间量，包括间接使用。",
+    ),  # deleted at version 4.44.3
+    ("Link existing folder", "关联现有文件夹"),  # deleted at version 4.44.3
     ("Link from allowed referrer", "来自允许引用者的链接"),
+    ("Link project with folder", "将项目与文件夹关联"),  # deleted at version 4.44.3
     ("Link to allowed origin", "链接至允许的来源"),
     (
         "List the steps needed to reproduce the issue, including any specific conditions.",
@@ -1481,6 +1804,7 @@ config = [
     ),
     ("List view", "列表视图"),
     ("Loading Docker models from Docker Hub...", ""),
+    ("Loading Docker projects", "加载 Docker 项目"),  # deleted at version 4.44.3
     ("Loading Image...", "加载镜像中..."),
     ("Loading Volume...", "加载卷中..."),
     ("Loading available model variants...", ""),
@@ -1502,13 +1826,21 @@ config = [
         "Local diagnostics failed, but you can still submit a ticket. We will contact you for more information.",
         "本地诊断失败，但你仍然可以提交工单。我们将联系你以获取更多信息。",
     ),
+    ("Local directory", "本地目录"),  # deleted at version 4.44.3
     ("Local file", "本地文件"),
     ("Local image", "本地镜像"),
     ("Local images", "本地镜像"),
+    ("Local image{0}{1}", "本地镜像{0}{1}"),  # deleted at version 4.44.3
     ("Local or Hub storage", "本地或 Hub 存储"),
+    ("Local path", "本地路径"),  # deleted at version 4.44.3
     ("Location", "位置"),
+    ("Location: ", "位置:"),  # deleted at version 4.44.3
     ("Login", "登录"),
     ("Logs", "日志"),
+    (
+        "Looks like this repository is already associated with a Project",
+        "看起来此存储库已经与一个项目关联",
+    ),  # deleted at version 4.44.3
     ("Lower input", ""),
     ("MAC Address", "MAC 地址"),
     ("MANIFEST DIGEST", "清单摘要"),
@@ -1518,7 +1850,10 @@ config = [
         "Make sure the URL is in the following format {0} with blob name as the name for your backup.",
         "确保 URL 格式如 {0}，并以 blob 名称作为备份名称。",
     ),
+    ("Make sure you have your tools installed!", "确保已安装所需工具！"),  # deleted at version 4.44.3
+    ("Manage Extensions", "管理扩展"),  # deleted at version 4.44.3
     ("Manage Kubernetes", "管理 Kubernetes"),
+    ("Manage Synchronized file shares with Compose", "使用 Compose 管理同步的文件共享"),  # deleted at version 4.44.3
     ("Manage extensions", "管理扩展"),
     ("Manage file syncs", "管理文件同步"),
     ("Manage repositories", "管理存储库"),
@@ -1527,14 +1862,19 @@ config = [
     ("Manage users, control access, & set policies.", "管理用户、控制访问和设置策略。"),
     (
         "Manage your Kubernetes cluster and apps easily with the Kubernetes Dashboard. Requires an internet connection.",
-        "",
+        "使用 Kubernetes 仪表板轻松管理您的 Kubernetes 集群和应用程序。需要互联网连接。",
     ),
+    (
+        "Manage your Kubernetes cluster and apps easily with the Kubernetes Dashboard. Requires an internet connection. {0}",
+        "使用 Kubernetes 仪表板轻松管理您的 Kubernetes 集群和应用程序。需要互联网连接。{0}",
+    ),  # deleted at version 4.44.3
     ("Manage your volumes, view usage, and inspect their contents.", "管理卷，查看占用情况并检查其内容。"),
     ("Manage {0}", "管理 {0}"),
     ("Manual installation:", "手动安装:"),
     ("Manual proxy configuration", "手动配置代理"),
     ("Manually", "手动"),
     ("Manually select repos", "手动选择存储库"),
+    ("Manually update WSL 2 myself", "手动更新 WSL 2"),  # deleted at version 4.44.3
     ("Many", "许多"),
     (
         "Map host ports to container ports for external access. Used if your app needs to be accessible outside the container.",
@@ -1546,11 +1886,13 @@ config = [
     ("Memory (%)", "内存 (%)"),
     ("Memory Limit", "内存限制"),
     ("Memory limit", "内存限制"),
+    ("Memory limit:", "内存限制:"),  # deleted at version 4.44.3
     ("Memory unit", "内存单位"),
     ("Memory usage", "内存占用"),
     ("Memory usage/limit", "内存占用/限制"),
     ("Memory usage:", "内存占用:"),
     ("Memory used over time", "随时间变化的内存使用情况"),
+    ("Message Gordon", "发送消息给 Gordon"),  # deleted at version 4.44.3
     ("Mode", "属性"),
     ("Model", "模型"),
     ("Model parameters", "模型参数"),
@@ -1563,6 +1905,7 @@ config = [
     ),
     ("Monthly", "每月"),
     ("More details:", "更多详情:"),
+    ("More examples", "更多示例"),  # deleted at version 4.44.3
     ("More guides at the Learning center", "学习中心的更多指南"),
     ("More info", "更多信息"),
     ("More samples", "更多示例"),
@@ -1573,6 +1916,10 @@ config = [
     ("Mount type", "挂载类型"),
     ("Mounts", "挂载"),
     ("Move disk image", "移动磁盘镜像"),
+    (
+        "Move quickly between branches or run them side by side in VSCode.",
+        "快速在分支之间切换或在 VSCode 中并排运行它们。",
+    ),  # deleted at version 4.44.3
     ("Move to bottom", "移动到底部"),
     ("Move to top", "移动到顶部"),
     (
@@ -1585,8 +1932,10 @@ config = [
     ("Must be signed in with a Business subscription", "必须使用商业订阅登录"),
     ("Must be signed in with an active subscription", "必须使用有效订阅登录"),
     ("My Contexts", "我的上下文"),
+    ("My Extensions{0}", "我的扩展{0}"),  # deleted at version 4.44.3
     ("My Hub", "我的镜像"),
     ("My extensions{0}", "我的扩展{0}"),
+    ("NEW", "新"),  # deleted at version 4.44.3
     ("Name", "名称"),
     ("Name (A-Z)", "名称（A-Z）"),
     ("Name your volume", "命名你的卷"),
@@ -1611,12 +1960,20 @@ config = [
     ("New", "新"),
     ("New Conversation", "新的对话"),
     ("New Volume{0}", "新的卷{0}"),
+    (
+        "New binaries are available to be installed which are used to extend Docker Desktop functionality.",
+        "新的二进制文件可用于安装，以扩展 Docker Desktop 功能。",
+    ),  # deleted at version 4.44.3
+    ("New binaries available", "新的二进制文件可用"),  # deleted at version 4.44.3
     ("New builder(s) available.", "有新的构建器可用。"),
+    ("New conversation", "新的对话"),  # deleted at version 4.44.3
     ("New feature", "新功能"),
     ("New image", "新镜像"),
+    ("New run command", "新的运行命令"),  # deleted at version 4.44.3
     ("New version", "新版本"),
     ("New version available", "新版本可用"),
     ("New version available.", "新版本可用。"),
+    ("Newer image available", "新的镜像可用"),  # deleted at version 4.44.3
     ("Newest", "最新"),
     (
         "Newly pushed images are analyzed automatically. Images that were pushed prior to enabling Docker Scout are not analyzed by default.{0}",
@@ -1628,6 +1985,7 @@ config = [
         "Next, learn how to use Docker to run multi-container applications.",
         "接下来，学习如何使用 Docker 运行多容器应用。",
     ),
+    ("No", "否"),  # deleted at version 4.44.3
     ("No Compose file selected", "未选择 Compose 文件"),
     ("No Config Found", "未找到配置"),
     ("No Docker models from Docker Hub found", "未找到来自 Docker Hub 的 Docker 模型"),
@@ -1636,12 +1994,15 @@ config = [
     ("No IPC events have been logged so far", "目前没有记录任何 IPC 事件"),
     ("No MCP servers", "无 MCP 服务"),
     ("No MCP servers found", "未找到 MCP 服务"),
+    ("No README found in project folder.", "在项目文件夹中找不到 README。"),  # deleted at version 4.44.3
+    ("No Vulnerabilities Found", "未发现漏洞"),  # deleted at version 4.44.3
+    ("No access to repository or invalid repository", "无法访问存储库或存储库无效"),  # deleted at version 4.44.3
     ("No active builds", "没有活跃的构建"),
     ("No analysis available", "无可用分析"),
     ("No build record found", "未找到构建记录"),
     ("No build results found.", "未找到构建结果。"),
-    ("No clients available to be connected with.", ""),
-    ("No clients found", ""),
+    ("No clients available to be connected with.", "没有可供连接的客户端。"),
+    ("No clients found", "未找到客户端"),
     ("No cloud engines created", "云引擎未创建"),
     ("No config maps or secrets", ""),
     ("No configuration required", ""),
@@ -1660,6 +2021,7 @@ config = [
     ("No images found", "未找到镜像"),
     ("No ingresses", ""),
     ("No jobs or cron jobs", ""),
+    ("No local copy", "无本地副本"),  # deleted at version 4.44.3
     ("No metadata available for line {0}.", "行 {0} 没有可用的元数据。"),
     ("No models found", "本地没有模型"),
     ("No models found in the cloud", ""),
@@ -1670,20 +2032,23 @@ config = [
     ("No overview", ""),
     ("No overview available for the {0} MCP server.", ""),
     ("No packages were added in the selected {0}.", "在选中的 {0} 中没有添加的软件包。"),
+    ("No packages were added\\n              ", "未添加任何软件包\\n              "),  # deleted at version 4.44.3
     ("No pods", ""),
     ("No ports exposed in this image", "该镜像没有公开的端口"),
     ("No recent conversations", ""),
     ("No recommendations available at this time.", "目前没有可用的建议。"),
     ("No repositories found", "未找到存储库"),
-    ("No requests found", ""),
+    ("No requests found", "未找到请求"),
     ("No response received", "未收到响应"),
     ("No results", "无结果"),
     ("No results found", "无搜索结果"),
     ("No results match your search. Please try again with a different keyword.", ""),
     ("No running terminals", "没有正在运行的终端"),
     ("No scan available", "没有扫描可用"),
-    ("No services", ""),
-    ("No source was found in this build's metadata", ""),
+    ("No services", "无服务"),
+    ("No services found", "未找到服务"),  # deleted at version 4.44.3
+    ("No source was found in this build's meta data", "在此构建的元数据中未找到源"),  # deleted at version 4.44.3
+    ("No source was found in this build's metadata", "在此构建的元数据中未找到源"),
     ("No tags", "无标签"),
     ("No tags found for this build", "此构建未找到标签"),
     ("No timing data found for this build.", "未找到此构建的计时数据。"),
@@ -1691,6 +2056,7 @@ config = [
     ("No tools available for the {0} MCP server.", ""),
     ("No tools available. Try again later.", ""),
     ("No volumes found", "未找到卷"),
+    ("No vulnerabilities ", "没有漏洞"),  # deleted at version 4.44.3
     ("No vulnerabilities were introduced in the selected {0}.", "在所选的 {0} 中未引入漏洞。"),
     ("No {0} containers found", "未找到 {0} 容器"),
     ("Node(s):", "节点:"),
@@ -1708,7 +2074,13 @@ config = [
     ("Not helpful", "无用"),
     ("Not in use by any containers", "没有被任何容器使用"),
     ("Not reviewed", "未审核"),
+    ("Not running", "未运行"),  # deleted at version 4.44.3
     ("Not supported", ""),
+    (
+        "Not sure what to ask? Try out one of the following questions:",
+        "不确定要问什么？试试以下问题:",
+    ),  # deleted at version 4.44.3
+    ("Not yet available", "尚未可用"),  # deleted at version 4.44.3
     ("Note", "备注"),
     ("Note:", "备注:"),
     ("Note: Additional parameters might be required.{0}", "注意: 可能需要额外的参数。{0}"),
@@ -1724,6 +2096,10 @@ config = [
         "Now, no matter how often you delete and restart the container, your data is persisted and accessible to any container on your system by mounting the database volume. Docker will check for a volume and create one if there is none present.",
         "现在，通过挂载数据库卷，无论你何时删除并重启容器，你的数据都是存在的，并且任何容器都可以访问。Docker 将检查一个卷，如果没有则创建。",
     ),
+    (
+        "Now, you can take advantage of the container’s environment while you develop the app on your local system. Any changes you make to the app on your local system are reflected in the container. In your local directory, open {0} in an IDE or text editor, update the {1} string, and save the file. Visit or refresh {2} to see the changes.",
+        "现在你可以利用容器中的环境并在你的本地系统中进行开发。你在本地系统上对该应用做出的任意更改都会反应在容器中。在你的本地目录中使用 IDE 或文本编辑器打开 {0} ，更新字符串 {1} 并保存。访问或者刷新 {2} 以查看更改。",
+    ),  # deleted at version 4.44.3
     ("OAuth", None),
     ("OK", "确定"),
     ("OS", None),
@@ -1758,12 +2134,19 @@ config = [
     ("Open Internal Test Page", "打开内部测试页面"),
     ("Open Kubernetes Dashboard", "打开 Kubernetes 仪表盘"),
     ("Open Logs Search", "打开日志搜索"),
+    ("Open Project", "打开项目"),  # deleted at version 4.44.3
+    ("Open Project Folder", "打开项目文件夹"),  # deleted at version 4.44.3
     ("Open Settings", "打开设置"),
+    ("Open a local folder", "打开本地文件夹"),  # deleted at version 4.44.3
+    ("Open a project folder", "打开项目文件夹"),  # deleted at version 4.44.3
+    ("Open folder", "打开文件夹"),  # deleted at version 4.44.3
     ("Open in IDE", "在 IDE 中打开"),
     ("Open in VSCode", "在 VSCode 中打开"),
     ("Open in external terminal", "在外部终端打开"),
     ("Open in new window", "在新窗口中打开"),
     ("Open in terminal", "在终端中打开"),
+    ("Open local folder", "打开本地文件夹"),  # deleted at version 4.44.3
+    ("Open project", "打开项目"),  # deleted at version 4.44.3
     (
         "Open the sample application in your IDE. Note that it already has a {0}. For your own projects you need to create this yourself.",
         "在 IDE 中打开示例应用。请注意它已经有一个 {0}。在你自己的项目中你需要自行创建。",
@@ -1780,6 +2163,7 @@ config = [
         "Optimise Dockerfiles while keeping them easy to read and maintain",
         "优化 Dockerfile 文件，同时保持其易于阅读和维护",
     ),
+    ("Optimize my Dockerfile", "优化我的 Dockerfile"),  # deleted at version 4.44.3
     (
         "Optimize your disk space by removing unused objects from Docker Desktop.",
         "通过从 Docker Desktop 中移除未使用的对象来优化磁盘空间。",
@@ -1795,11 +2179,13 @@ config = [
         "Or enable {0}* to bring the tools you need to debug your container, even when it's not running",
         "或启用 {0}* 以提供调试容器所需的工具，即使它未运行",
     ),
+    ("Or try running a sample...", "或者尝试运行一个示例..."),  # deleted at version 4.44.3
+    ("Or you can use an {0} Git repository URL.", "或者，你可以使用 {0} Git 存储库 URL。"),  # deleted at version 4.44.3
     ("Org / Account", "组织/账户"),
     ("Org-wide only", "仅组织范围"),
     ("Org/Account", "组织/账户"),
     ("Organization: {0}", "组织: {0}"),
-    ("Organizations", ""),
+    ("Organizations", "组织"),
     ("Other", None),
     ("Other notification options", "其他通知选项"),
     (
@@ -1807,19 +2193,27 @@ config = [
         "我们的文档将引导你完成构建自己的扩展。它还提供了准备就绪的示例文件夹。",
     ),
     ("Output", "输出"),
+    (
+        "Overcome local resource limits by shifting your development workloads to the cloud. Project Harmonia in Docker Desktop lets you continue using your existing tools and accessing applications via localhost, all while benefiting from unlimited system resources and GPU-accelerated cloud engines.",
+        "将开发工作负载转移到云端来克服本地资源限制。Docker Desktop 中的 Harmonia 项目让你继续使用现有的工具并通过 localhost 访问应用程序，同时受益于无限的系统资源和 GPU 加速的云引擎。",
+    ),  # deleted at version 4.44.3
     ("Overview", "概述"),
     ("Overwrite data", "覆盖数据"),
     ("Owner", "所有者"),
     ("PARAMETERS", ""),
     ("PIDS", None),
+    ("Package", "软件包"),  # deleted at version 4.44.3
     ("Package Name", "软件包名称"),
     ("Package Type", "软件包类型"),
     ("Package details:", "软件包详情:"),
     ("Package in base image layers", "基础镜像层中的软件包"),
     ("Package location:", "软件包位置:"),
+    ("Package name", "软件包名称"),  # deleted at version 4.44.3
     ("Package or CVE name", "软件包或漏洞名称"),
     ("Package scope", "软件包范围"),
+    ("Package type", "软件包类型"),  # deleted at version 4.44.3
     ("Packages ", "软件包 "),
+    ("Packages: {0}", "软件包: {0}"),  # deleted at version 4.44.3
     ("Parallel execution", "并行执行"),
     ("Parallel execution:", "并行执行:"),
     ("Parameters", None),
@@ -1831,6 +2225,7 @@ config = [
     ("Path", "路径"),
     ("Path to TLS certificate file.", "TLS 证书文件路径。"),
     ("Path to TLS key file.", "TLS 密钥文件路径。"),
+    ("Path to directory", "目录路径"),  # deleted at version 4.44.3
     ("Path to seccomp profile.", "seccomp 配置文件路径。"),
     ("Path to the docker-init binary.", "docker-init 二进制文件的路径。"),
     ("Path to the userland proxy binary.", "用户态代理（userland proxy）二进制文件路径。"),
@@ -1841,14 +2236,26 @@ config = [
     ("Persist your data between containers", "在容器之间保留你的数据"),
     ("Personal", "个人"),
     ("Personal Access Token", "个人访问令牌 PAT"),
+    (
+        "Pick a local destination for your project",
+        "为您的项目选择一个本地目的地（Destination）",
+    ),  # deleted at version 4.44.3
+    (
+        "Pick the owner, and give your project a memorable name.",
+        "选择拥有者，并为你的项目取一个令人难忘的名字。",
+    ),  # deleted at version 4.44.3
     ("Ping", None),
     ("Plain-text view", "纯文本视图"),
     ("Platform", "平台"),
+    ("Playground", "游乐场"),  # deleted at version 4.44.3
     ("Please check your internet connection", "请检查您的互联网连接"),
     ("Please contact your administrator.", "请联系你的管理员。"),
     ("Please remove it and retry.", "请删除它并重试。"),
+    ("Please select a folder.", "请选择一个文件夹"),  # deleted at version 4.44.3
+    ("Please sign in to use Docker Desktop.", "请登录以使用 Docker Desktop。"),  # deleted at version 4.44.3
     ("Pods", ""),
     ("Policy", "策略"),
+    ("Policy impact:", "策略影响:"),  # deleted at version 4.44.3
     ("Policy name placeholder", "策略名称占位符"),
     ("Policy status placeholder", "策略状态占位符"),
     ("Popular", "欢迎程度"),
@@ -1875,12 +2282,19 @@ config = [
     ("Problems", None),
     ("Process ID PID: - {0}", "进程 ID PID: - {0}"),
     ("Progress", "进度"),
+    ("Project Destination", "项目目的地（Destination）"),  # deleted at version 4.44.3
     ("Project Harmonia", "Harmonia 项目"),
     (
         "Project Harmonia is now in Early Access. If you're interested in gaining access to help shape the future of cloud-backed development with Docker, apply using the link below. We will contact you as soon as possible to get you started.",
         "Harmonia 项目现已进入早期访问阶段。如果你有兴趣获得访问权限，以帮助塑造使用 Docker 云支持开发的未来，请使用以下链接申请。我们将尽快联系你以开始。",
     ),
     ("Project Harmonia logo", "Harmonia 项目 logo"),
+    ("Project Name", "项目名称"),  # deleted at version 4.44.3
+    ("Project name", "项目名称"),  # deleted at version 4.44.3
+    ("Project name and owner", "项目名称和拥有者"),  # deleted at version 4.44.3
+    ("Project name template", "项目名称模板"),  # deleted at version 4.44.3
+    ("Projects", "项目"),  # deleted at version 4.44.3
+    ("Projects are connected to your Docker account.", "项目已连接到你的 Docker 帐户。"),  # deleted at version 4.44.3
     ("Prompt", "提示"),
     ("Prompt tokens", ""),
     ("Provenance {0}", "出处 {0}"),
@@ -1897,6 +2311,7 @@ config = [
         "Publish an extension on the Marketplace automatically or request a review from the Docker extension team.",
         "在扩展市场上自动发布扩展或向 Docker 扩展团队请求审核。",
     ),
+    ("Publish date:", "发布日期:"),  # deleted at version 4.44.3
     ("Publish your image", "发布你的镜像"),
     ("Publisher", "发布者"),
     ("Pull", "拉取"),
@@ -1938,9 +2353,22 @@ config = [
     ),
     ("Quitting...{0}", "退出中...{0}"),
     ("RAM {0}", "内存 {0}"),
+    ("README", None),  # deleted at version 4.44.3
+    ("RFC 2460", None),  # deleted at version 4.44.3
+    ("RFC 8200", None),  # deleted at version 4.44.3
+    ("Rate my Dockerfile", "评估我的 Dockerfile"),  # deleted at version 4.44.3
+    (
+        "Rate the quality of your Dockerfile and get suggestions for improvements.",
+        "评估你的 Dockerfile 质量并获得改进建议。",
+    ),  # deleted at version 4.44.3
     ("Raw JSON", "原始 JSON"),
     ("React Flow", "反应流"),
     ("React, ExpressJS, and MongoDB", "React、ExpressJS 和 MongoDB"),
+    ("Read Docker AI Supplemental Terms", "阅读 Docker AI 补充条款"),  # deleted at version 4.44.3
+    (
+        "Read about how Docker Hub usage plans will be changing and how your usage fits into these updates.",
+        "了解 Docker Hub 使用计划将如何变化，以及你的使用如何适应这些更新。",
+    ),  # deleted at version 4.44.3
     (
         "Read more about how to set this up in your own applications via the {0}.",
         "通过阅读 {0} 以了解如何在你自己的应用中设置。",
@@ -1950,9 +2378,11 @@ config = [
     ("Read our policy regarding uploaded diagnostic data", "阅读我们关于上传诊断数据的政策"),
     ("Read {0}", "阅读{0}"),
     ("Read-only", "只读"),
+    ("Ready", "准备就绪"),  # deleted at version 4.44.3
     ("Real time", "实际时间"),
     ("Real time:", "实际时间:"),
     ("Reason", "原因"),
+    ("Rebuild & restart", "重新构建并重启"),  # deleted at version 4.44.3
     (
         "Rebuild the image using a newer base image version. This may cause breaking changes.",
         "使用较新版本的基础镜像重新构建镜像。这可能会导致破坏性更改。",
@@ -1967,18 +2397,25 @@ config = [
     ("Recently Updated", "最近更新"),
     ("Recently added", "最近新增"),
     ("Recently updated", "最近更新"),
+    ("Recents", "最近"),  # deleted at version 4.44.3
     ("Reclaim space", "回收空间"),
     ("Recommendations for base image...", "对基础镜像的建议..."),
     ("Recommendations for this image...", "对此镜像的建议..."),
     ("Recommendations from Docker", "来自 Docker 的建议"),
+    ("Recommended", "推荐"),  # deleted at version 4.44.3
     ("Recommended fixes", "推荐的修复"),
     ("Recommended fixes for base image {0}", "基础镜像 {0} 的推荐修复"),
+    ("Recommended fixes for base image {0}{1}", "基础镜像 {0}{1} 的推荐修复"),  # deleted at version 4.44.3
     ("Recommended fixes for {0}", "推荐的修复针对 {0}"),
     ("Recurrence", "重复"),
     ("Redo", "重做"),
     (
+        "Reduce your image size and build times by improving your Dockerfile.",
+        "通过改进 Dockerfile 来减少镜像大小和构建时间。",
+    ),  # deleted at version 4.44.3
+    (
         "Reduces CPU and memory utilization when no containers are running. Exit  from Resource Saver mode happens automatically when containers are started.",
-        "",
+        "在没有容器运行时降低 CPU 和内存利用率。当容器启动时会自动退出资源节省模式。",
     ),
     (
         "Reduces CPU and memory utilization when no containers are running. Exit from Resource Saver mode happens automatically when containers are started.",
@@ -2002,16 +2439,23 @@ config = [
     ("Related history", "相关历史"),
     ("Release Notes", "发行说明"),
     ("Release notes", "发行说明"),
+    ("Reload", "重新加载"),  # deleted at version 4.44.3
+    ("Remote Source", "远程源"),  # deleted at version 4.44.3
     ("Remote source location", "远程源位置"),
     ("Remove", "删除"),
     ("Remove MCP server", "删除 MCP 服务"),
+    ("Remove all my unused images and containers", "删除所有未使用的镜像和容器"),  # deleted at version 4.44.3
+    ("Remove container", "删除容器"),  # deleted at version 4.44.3
+    ("Remove dev environment", "删除开发环境"),  # deleted at version 4.44.3
     ("Remove exception for vulnerability {0}?", "删除漏洞 {0} 的例外吗？"),
     ("Remove file", "删除文件"),
+    ("Remove from Desktop", "从 Desktop 删除"),  # deleted at version 4.44.3
     ("Remove mount stubs recursively", "递归删除挂载存根（stubs）"),
     ("Remove selected servers", "删除选中的服务"),
     ("Remove server", "删除服务"),
     ("Removing a volume permanently deletes its contents.", "删除卷将永久删除其内容。"),
     ("Rename", "重命名"),
+    ("Rename container {0}", "重命名容器 {0}"),  # deleted at version 4.44.3
     ("Rename your image", "重命名你的镜像"),
     ("Repair", "修复"),
     ("Replace your old tag with this new one in your Dockerfile", "在你的 Dockerfile 中用这个新标签替换旧标签"),
@@ -2021,11 +2465,23 @@ config = [
     ("Report issue on GitHub", "在 GitHub 上报告问题"),
     ("Report the extension to Docker for abuse or security reasons.", "由于滥用或安全原因向 Docker 报告该扩展。"),
     ("Repository limit exceeded", "存储库限制已超出"),
+    (
+        'Repository will be cloned into "{0}" within the path above.',
+        '存储库将会克隆到上述路径中的 "{0}"。',
+    ),  # deleted at version 4.44.3
+    (
+        'Repository {0} cloned into "{1}" within the path above.',
+        '存储库 {0} 已克隆到上述路径中的 "{1}"。',
+    ),  # deleted at version 4.44.3
     ("Repository:", "存储库"),
     ("Request", "请求"),
+    ("Request a guide", "请求指南"),  # deleted at version 4.44.3
+    ("Request a sample", "请求示例"),  # deleted at version 4.44.3
     ("Request access to Project Harmonia", "请求访问 Harmonia 项目"),
     ("Request an extension", "请求扩展"),
-    ("Requests", ""),
+    ("Requests", "请求"),
+    ("Requires running Kubernetes cluster.", "需要运行 Kubernetes 集群。"),  # deleted at version 4.44.3
+    ("Reset Cluster", "重置集群"),  # deleted at version 4.44.3
     ("Reset Docker Desktop to factory defaults", "将 Docker Desktop 恢复出厂默认设置"),
     ("Reset Docker Desktop to factory defaults?", "将 Docker Desktop 恢复到出厂默认设置吗"),
     ("Reset Kubernetes Cluster", "重置 Kubernetes 集群"),
@@ -2040,22 +2496,25 @@ config = [
         "Resizing to a smaller size will delete the disk image; all Docker images, containers and volumes will be lost.",
         "调整到较小的大小将删除磁盘镜像; 所有的 Docker 镜像，容器和卷都将丢失。",
     ),
+    ("Resolving shell...", "解析 shell 中..."),  # deleted at version 4.44.3
     ("Resource Allocation", "资源分配"),
     ("Resource Saver Threshold", ""),
     ("Resource Saver{0}", "资源节省{0}"),
     ("Resource usage", "资源占用"),
     ("Resources", "资源"),
     ("Response", "响应"),
-    ("Response metadata", ""),
+    ("Response metadata", "响应元数据"),
     ("Restart", "重启"),
     ("Restart Docker Desktop", "重启 Docker Desktop"),
     ("Restart Docker Desktop?", "重启 Docker Desktop?"),
     ("Restart policy", "重启策略"),
+    ("Restarting...", "重启中..."),  # deleted at version 4.44.3
     ("Restart{0}", "重启{0}"),
     ("Result", "结果"),
     ("Resume", "恢复"),
     ("Retry", "重试"),
     ("Review consumption & billing", ""),
+    ("Review these terms carefully before proceeding.", "在继续前，请仔细审查这些条款。"),  # deleted at version 4.44.3
     ("Reviewed", "已审核"),
     ("Revision", "修订"),
     ("Revoke", "撤销"),
@@ -2066,21 +2525,27 @@ config = [
     ("Run", "运行"),
     ("Run Docker Hub images", "运行 Docker Hub 上的镜像"),
     ("Run LLMs in the Cloud", "在云中运行 LLMs"),
+    ("Run a microservices container", "运行微服务容器"),  # deleted at version 4.44.3
     ("Run a new container", "运行新容器"),
+    ("Run a single container", "运行单个容器"),  # deleted at version 4.44.3
     ("Run an init in the container to forward signals and reap processes.", "在容器中运行 init 以转发信号并收集进程"),
+    ("Run command", "运行命令"),  # deleted at version 4.44.3
     (
         "Run containers on Docker’s high-performance cloud directly from your laptop, with optional GPU support to speed up AI workloads.",
-        "",
+        "直接从您的笔记本电脑在 Docker 的高性能云上运行容器，并提供可选的 GPU 支持以加快 AI 工作负载。",
     ),
     ("Run integration tests with real dependencies.", "运行具有真实依赖关系的集成测试。"),
     ("Run the command", "运行命令"),
-    ("Run the command below to update or for more information, visit .{0}", ""),
+    (
+        "Run the command below to update or for more information, visit .{0}",
+        "运行下面的命令以更新或有关详细信息，访问。{0}",
+    ),
     (
         "Run the container in the foreground for debugging or applications needing user input.",
         "在前台运行容器，用于调试或需要用户输入的应用。",
     ),
-    ("Run the following command in a terminal to create a deployment", ""),
-    ("Run the following command in a terminal to run a container in a pod", ""),
+    ("Run the following command in a terminal to create a deployment", "在终端中运行以下命令以创建部署"),
+    ("Run the following command in a terminal to run a container in a pod", "在终端中运行以下命令以在 pod 中运行容器"),
     (
         "Run the following command to run your project with compose watch.",
         "运行以下命令以使用 Compose Watch 运行项目。",
@@ -2090,6 +2555,7 @@ config = [
         "Run this application with the {0} command in your project directory.",
         "在你的项目目录下执行 {0} 命令以运行该应用。",
     ),
+    ("Run your apps in the cloud", "在云中运行你的应用"),  # deleted at version 4.44.3
     (
         "Run your builds on cloud infrastructure optimally dimensioned for your workloads, and experience improved build speeds.",
         "",
@@ -2100,7 +2566,9 @@ config = [
         "Run your workloads in the cloud without giving up your current tools, workflows, or commands. Enjoy a local-like experience without worrying about limited CPU, memory, or storage on your machine.",
         "",
     ),
+    ("Running", "运行中"),  # deleted at version 4.44.3
     ("Running containers", "运行容器"),
+    ("Running tasks...", "运行任务中..."),  # deleted at version 4.44.3
     ("Running the application", "运行应用"),
     ("Runtime execution options.", "运行时执行选项。"),
     ("Rust", None),
@@ -2109,8 +2577,10 @@ config = [
     ("S2 - System performance issues or bug impacting business operations", "S2 - 系统性能问题或影响业务操作的错误"),
     ("S3 - Technical request, configuration change", "S3 - 技术请求，配置更改"),
     ("S4 - General question", "S4 - 一般问题"),
+    ("SBOM indexing", "SBOM 索引"),  # deleted at version 4.44.3
     ("SBOM indexing preferences can be changed in {0}", "SBOM 索引首选项可以在 {0} 修改"),
     ("SIZE", "大小"),
+    ("SSH", None),  # deleted at version 4.44.3
     ("SSH ID", None),
     ("STAGE", None),
     ("START", None),
@@ -2118,6 +2588,7 @@ config = [
     ("Sample image", "示例镜像"),
     ("Samples", "示例"),
     ("Save", "保存"),
+    ("Save Changes", "保存修改"),  # deleted at version 4.44.3
     ("Save as...", "保存为..."),
     ("Save changes", "保存修改"),
     ("Schedule export", "自动导出"),
@@ -2136,6 +2607,10 @@ config = [
     ("Scroll to top", "滚动到顶部"),
     ("Search", "搜索"),
     ("Search for CVE", "搜索漏洞"),
+    (
+        "Search for images, containers, volumes, extensions and more...",
+        "搜索镜像，容器，卷，扩展以及更多...",
+    ),  # deleted at version 4.44.3
     ("Search for the image", "搜索镜像"),
     ("Search images to run", "搜索要运行的镜像"),
     ("Search in history", "在历史记录中搜索"),
@@ -2164,13 +2639,23 @@ config = [
         "See your container networks in detail with Docker Desktop’s new network visualizer. Simplify network mapping and troubleshooting.",
         "",
     ),
+    ("Select", "选择"),  # deleted at version 4.44.3
     ("Select All", "全选"),
     ("Select a .dockerbuild or .dockerbuild.zip file to upload", "选择一个 .dockerbuild 或 .dockerbuild.zip 文件上传"),
+    ("Select a directory", "选择一个目录"),  # deleted at version 4.44.3
     (
         "Select a file (.tar.gz, .tar.zst, or .tar.bz2) whose content is to be imported into the {0} volume.",
         "选择要将其内容导入到 {0} 卷的文件（.tar.gz、.tar.zst 或 .tar.bz2）。",
     ),
     ("Select a file from the side menu to view", "从侧边菜单栏选择一个文件以查看"),
+    (
+        "Select a project context and easily identifiable name for your project",
+        "选择一个项目上下文和易于识别的项目名称",
+    ),  # deleted at version 4.44.3
+    (
+        "Select a remote source, and a local destination to clone to",
+        "选择远程源和本地克隆目的地",
+    ),  # deleted at version 4.44.3
     ("Select a version of the image.", "选择镜像的版本。"),
     ("Select all", "全选"),
     ("Select all that apply", "选择所有适用的选项"),
@@ -2184,6 +2669,7 @@ config = [
     ("Select directory", "选择目录"),
     ("Select driver", "选择驱动"),
     ("Select file or directory", "选择文件或目录"),
+    ("Select folder", "选择文件夹"),  # deleted at version 4.44.3
     ("Select image", "选择镜像"),
     ("Select location(s)", "选择位置"),
     ("Select network", "选择网络"),
@@ -2210,11 +2696,17 @@ config = [
     ("Selected builder", "选中的构建器"),
     ("Selected context is unsupported", "选中的上下文不受支持"),
     ("Selected context requires sign in", "所选上下文需要登录"),
+    ("Selected folder and repository", "选定的文件夹和仓库"),  # deleted at version 4.44.3
     ("Selected image", "选中的镜像"),
     ("Selected package", "选中的软件包"),
     ("Selected {0} of {1}", "选中 {0} 共 {1}"),
     ("Selected {0} {1}", "已选择 {0} {1}"),
     ("Selector", "选择器"),
+    ("Send Bugsnag test event", "发送 Bugsnag 测试事件"),  # deleted at version 4.44.3
+    (
+        "Send Bugsnag test event with random groupingHash",
+        "发送带有随机 groupingHash 的 Bugsnag 测试事件",
+    ),  # deleted at version 4.44.3
     (
         "Send error reports, system version and language as well as Docker Desktop lifecycle information (e.g., starts, stops, resets).",
         "发送错误报告、系统版本和语言以及 Docker Desktop 生命周期信息（例如，启动、停止、重置）。",
@@ -2224,6 +2716,7 @@ config = [
     ("Servers", "服务"),
     ("Servers ", "服务"),
     ("Services", "服务"),
+    ("Services that will run", "将要运行的服务"),  # deleted at version 4.44.3
     ("Set CORS headers in the Engine API.", "在引擎 API 中设置 CORS 头"),
     ("Set Kubernetes mode", "设置 Kubernetes 模式"),
     ("Set cluster store options.", "设置集群存储选项。"),
@@ -2263,13 +2756,20 @@ config = [
     ("Setting up your guide", "正在设置你的指南"),
     ("Settings", "设置"),
     ("Settings{0}", "设置 {0}"),
+    ("Setup", "设置"),  # deleted at version 4.44.3
     ("Several", "几位"),
     ("Severity", "严重程度"),
     ("Share", "分享"),
+    (
+        "Share code (including dependencies) with your team members in one click.",
+        "一键分享代码（包括依赖项）给团队成员。",
+    ),  # deleted at version 4.44.3
     ("Share this view", "分享此视图"),
+    ("Share your apps with your team", "与团队共享你的应用"),  # deleted at version 4.44.3
     ("Shared", "共享"),
     ("Shared Ports", "共享端口"),
     ("Show CLI Hints", "显示 CLI 提示"),
+    ("Show CLI hints", "显示命令行提示"),  # deleted at version 4.44.3
     (
         "Show Docker Desktop Extensions internal containers when using Docker commands.",
         "使用 Docker 命令时显示 Docker Desktop 扩展内部容器。",
@@ -2279,6 +2779,7 @@ config = [
     ("Show Timestamp", "显示时间戳"),
     ("Show all", "全部显示"),
     ("Show all ports ({0})", "显示所有端口（{0}）"),
+    ("Show all {0} locations", "显示所有 {0} 位置"),  # deleted at version 4.44.3
     ("Show charts", "显示图表"),
     ("Show cloud engine actions", "显示云端引擎操作"),
     ("Show container actions", "显示容器操作"),
@@ -2288,6 +2789,7 @@ config = [
     ("Show less", "显示较少"),
     ("Show more", "显示更多"),
     ("Show only my builds", "仅显示我的构建"),
+    ("Show package details", "显示软件包详情"),  # deleted at version 4.44.3
     ("Show system containers (advanced)", "显示系统容器（高级）"),
     ("Showing {0} items", "显示 {0} 个项目"),
     ("Showing {0} {1}", "显示 {0} {1}"),
@@ -2302,6 +2804,7 @@ config = [
         "Sign in to connect to your Docker Desktop subscription or access online features.",
         "登录以连接到你的 Docker Desktop 订阅或访问在线功能。",
     ),
+    ("Sign in to continue", "登录以继续"),  # deleted at version 4.44.3
     ("Sign in to continue using Docker Desktop.", "登录以继续使用 Docker Desktop。"),
     ("Sign in to try Offload", "登录以尝试卸载"),
     ("Sign in to use Ask Gordon", "登录以使用 Ask Gordon"),
@@ -2313,6 +2816,8 @@ config = [
     ),
     ("Sign in to your Docker account to see Compose docs.", "登录你的 Docker 账户以查看 Compose 文档。"),
     ("Sign in using your work email address", "使用你工作电子邮箱登录"),
+    ("Sign in with GitHub", "使用 Github 登录"),  # deleted at version 4.44.3
+    ("Sign in with Google", "使用 Google 登录"),  # deleted at version 4.44.3
     (
         "Sign into your Docker account to start experiencing the power and convenience of cloud-backed local development today!",
         "登录到你的 Docker 账户，今天就开始体验云支持的本地开发的强大和便捷！",
@@ -2330,6 +2835,10 @@ config = [
         "Simply select the app stack, and then select {0} on Docker Desktop. When you want to restart, run {1} in the project folder again. This will restart your application again. Note that when the db container is deleted, any todos created are also lost.",
         "只需要在 Docker Desktop 选择应用详情，然后选择 {0} 。当你想再次启动时，在项目目录下重新运行 {1} 。这将重新启动您的应用程序。请注意，当 db 容器被删除时，创建的任何待办事项也会丢失。",
     ),
+    (
+        "Simulates different tray icon statuses. Note: Dynamic icons are disabled on Linux unless you provide an overriding environment variable.",
+        "模拟不同的托盘图标状态。注意: 除非提供覆盖环境变量，否则动态图标在 Linux 上被禁用。",
+    ),  # deleted at version 4.44.3
     ("Size", "大小"),
     ("Skip", "跳过"),
     ("Slack", None),
@@ -2347,8 +2856,11 @@ config = [
     ("Some components can be updated: {0}{1}", "一些组件可以更新: {0}{1}"),
     ("Some important Docker resources", "一些重要的 Docker 资源"),
     ("Something went wrong", "发生了一些错误"),
-    ("Something went wrong when uninstalling Docker", "卸载 Docker 时出现了问题"),
-    ("Something went wrong while connecting. {0}Stop Docker {1} and try again.", ""),
+    ("Something went wrong when uninstalling Docker", "卸载 Docker 时出现问题"),
+    (
+        "Something went wrong while connecting. {0}Stop Docker {1} and try again.",
+        "连接时出现问题。{0} 停止 Docker {1} 并重试。",
+    ),
     ("Something went wrong whilst downloading the update.", "下载更新时出错。"),
     (
         "Something went wrong! We've logged this error and will review it as soon as we can.",
@@ -2373,6 +2885,7 @@ config = [
     ("Source input", "源输入"),
     ("Source not found", "源未找到"),
     ("Source path", "源路径"),
+    ("Source repository", "源存储库"),  # deleted at version 4.44.3
     ("Source tab", "源选项卡"),
     ("Source:", "源:"),
     ("Space to be reclaimed", "待回收空间"),
@@ -2401,6 +2914,7 @@ config = [
     ("Specify what you will use Docker for.", "指定您将使用 Docker 做什么。"),
     ("Specify your environment files", "指定你的环境文件"),
     ("Speed", ""),
+    ("Speed up your Docker Builds.", "加快你的 Docker 构建。"),  # deleted at version 4.44.3
     ("Speed up your builds.", "加快你的构建。"),
     ("Spring & Postgres", "Spring 和 Postgres"),
     ("Start", "启动"),
@@ -2410,18 +2924,27 @@ config = [
         "Start a Kubernetes single or multi-node cluster when starting Docker Desktop.",
         "启动 Docker Desktop 时启动 Kubernetes 单节点或多节点集群。",
     ),
+    (
+        "Start a Kubernetes single-node cluster when starting Docker Desktop.",
+        "启动 Docker Desktop 时启动 Kubernetes 单节点集群。",
+    ),  # deleted at version 4.44.3
     ("Start analysis", "开始分析"),
     ("Start building your extension with the following command:", "使用以下命令开始构建扩展:"),
     ("Start new terminal", "启动新终端"),
     ("Start the builder to inspect its details and build records.", "启动构建器以检查其详细信息和构建记录。"),
     ("Start typing to search", "开始搜索"),
+    ("Start typing to search in repository...", "开始输入以在存储库中搜索..."),  # deleted at version 4.44.3
     (
         "Start your GenAI application using Neo4j, Langchain, Ollama, Python, and Docker Compose",
         "使用 Neo4j、Langchain、Ollama、Python 和 Docker Compose 启动你的 GenAI 应用",
     ),
     ("Started {0}", "已启动 {0}"),
+    ("Starting service...", "启动服务中..."),  # deleted at version 4.44.3
     ("Starting the Docker Engine...", "Docker 引擎启动中..."),
-    ("Starts the privileged helper process which binds privileged ports that are between 1 and 1024.", ""),
+    (
+        "Starts the privileged helper process which binds privileged ports that are between 1 and 1024.",
+        "启动特权帮助程序进程，用于绑定介于 1 和 1024 之间的特权端口。",
+    ),
     (
         "Starts the privileged helper process which binds privileged ports that are between 1 and 1024. {0}",
         "启动特权帮助程序进程，用于绑定介于 1 和 1024 之间的特权端口。{0}",
@@ -2441,12 +2964,15 @@ config = [
     ("Stop current project containers?", "停止当前项目的容器吗？"),
     ("Stop watch mode", "停止监视（watch）模式"),
     ("Stop your container", "停止你的容器"),
+    ("Stopped", "已停止"),  # deleted at version 4.44.3
+    ("Stopping...", "停止中..."),  # deleted at version 4.44.3
     ("Storage driver options.", "存储驱动选项。"),
     ("Storage driver to use.", "要使用的存储驱动。"),
     ("Storage error", "存储错误"),
     ("Storage limit", "存储限制"),
     ("Store and backup your images remotely", "远程存储和备份您的镜像"),
     ("Stored data", "存储的数据"),
+    ("Submit feedback", "提交反馈"),  # deleted at version 4.44.3
     ("Submitting...{0}", "提交中...{0}"),
     ("Subnet", "子网"),
     ("Subnet: ", "子网: "),
@@ -2463,6 +2989,7 @@ config = [
     ("Switch Docker context to cloud engine after creation", "创建后切换 Docker 上下文到云引擎"),
     ("Switch account to '{0}'?", "账户切换到 '{0}'?"),
     ("Switch between building and running your containers on your local machine or offload to the cloud.", ""),
+    ("Switch to Docker Cloud", "切换到 Docker 云"),  # deleted at version 4.44.3
     ("Switch to Docker {0}", "切换到 Docker {0}"),
     ("Switch to Linux containers to continue", "切换到 Linux 容器以继续"),
     ("Switch to {0} containers", "切换到 {0} 容器"),
@@ -2477,13 +3004,26 @@ config = [
     ("Synchronized File Shares", "同步文件共享"),
     ("Synchronized file shares", "同步文件共享"),
     ("System (requires password)", "系统安装（需要密码）"),
+    ("System Status", "系统状态"),  # deleted at version 4.44.3
     ("System default", "系统默认"),
+    ("TOKENS", None),  # deleted at version 4.44.3
+    ("TOKENS/S", None),  # deleted at version 4.44.3
     ("TYPE", "类型"),
     ("Table", "表格"),
     ("Tag", "标签"),
     ("Tag:", "标签:"),
     ("Tags", "标签"),
+    (
+        "Take advantage of Project Harmonia's collaboration features. No more screen sharing or deploying from someone else's branch. You can now effortlessly share previews of your cloud-based applications for real-time feedback.",
+        "利用 Harmonia 项目的协作功能。不再需要屏幕共享或从他人的分支部署。你现在可以轻松地分享基于云的应用程序的预览以获取实时反馈。",
+    ),  # deleted at version 4.44.3
     ("Target", "目标"),
+    ("Tasks", "任务"),  # deleted at version 4.44.3
+    (
+        "Tell us more about how to run your project, save time getting started",
+        "告诉我们更多关于如何运行你的项目，节省开始时间",
+    ),  # deleted at version 4.44.3
+    ("Tell us more...", "告诉我们更多..."),  # deleted at version 4.44.3
     ("Temporary read permission granted to", "授予临时读取权限"),
     ("Terminal", "终端"),
     ("Terminal has exited{0}", "终端已退出{0}"),
@@ -2509,6 +3049,14 @@ config = [
         "The Extensions Marketplace is managed by your organization. See {0}{1}",
         "扩展市场由您的组织管理。请参见 {0}-{1}",
     ),
+    (
+        "The Git repository is cloned into a Volume and attaches to your containers so that you can develop directly inside of them using Visual Studio Code.",
+        "Git 存储库已克隆到卷中，并附加到你的容器上，这样你就可以直接在其中使用 Visual Studio Code 进行开发。",
+    ),  # deleted at version 4.44.3
+    (
+        "The Git repository is cloned to a local directory and attaches to your containers as a bind mount. This shares the directory from your computer to the container, and allows you to develop using any local editor or IDE.",
+        "Git 存储库已克隆到本地目录，并作为绑定挂载附加到你的容器上。这将从你的电脑共享目录到容器，允许你使用任何本地编辑器或 IDE 进行开发。",
+    ),  # deleted at version 4.44.3
     ("The Root Schema", ""),
     ("The ability to build and run Wasm containers", "构建和运行 Wasm 容器的能力"),
     (
@@ -2558,6 +3106,10 @@ config = [
     ("The exception will not be updated.", "该例外将不会被更新。"),
     ("The extension will be available once the update is complete.", "更新完成后，扩展将可用。"),
     ("The extension {0} does not exist", "扩展 {0} 不存在"),
+    (
+        "The file {0} was not found in your project directory. Edit your run config, or review your project for changes.",
+        "在你的项目目录中找不到 {0} 文件。编辑你的运行配置，或者检查项目是否有更改。",
+    ),  # deleted at version 4.44.3
     ("The following binaries are now incorrectly linked:", "以下二进制文件现在链接不正确:"),
     ("The following binaries are now missing:", "以下二进制文件现在缺失:"),
     ("The following build record is selected for deletion:", "以下构建记录被选中删除:"),
@@ -2566,11 +3118,17 @@ config = [
         "The image used to launch this container has since been {0}. This was its tag when the container was created.",
         "用于启动此容器的镜像已被 {0}。这是创建容器时的标签。",
     ),
+    (
+        "The microservices sample has a server, proxy, and DB.",
+        "微服务示例包含服务器、代理和数据库。",
+    ),  # deleted at version 4.44.3
     ("The model's ID", "模型 ID"),
     (
         "The rest of this guide requires you to run commands in the new project directory. Run the following command before moving on.",
         "该指南的剩余部分要求你在该项目目录中运行命令。在继续之前运行以下命令。",
     ),
+    ("The run command cannot be deleted while it is running", "运行命令在执行时无法删除"),  # deleted at version 4.44.3
+    ("The run command cannot be edited while it is running", "运行命令在执行时无法编辑"),  # deleted at version 4.44.3
     ("The server provides the following tools for interacting with {0}:", ""),
     (
         "The symlink of the default Docker socket. Additionally, Docker Desktop ensures that the context is switched to desktop-linux on startup.",
@@ -2652,6 +3210,10 @@ config = [
         "此构建在完成前被取消。部分构建数据可能不可用或缺失。",
     ),
     ("This builder node is inactive", "此构建器节点处于非活跃状态"),
+    (
+        "This button will focus the current window after 2 seconds",
+        "此按钮将在2秒后聚焦当前窗口",
+    ),  # deleted at version 4.44.3
     ("This can be overridden on a per-network basis.", ""),
     (
         "This can prevent Docker from starting, reset your daemon settings if it hangs.",
@@ -2685,11 +3247,28 @@ config = [
         "This is a simple todo application built using ExpressJS and Node. All todos are saved in a MongoDB database.",
         "这是一个使用 ExpressJS 和 Node 构建的简单待办应用。所有待办事项都保存在 MongoDB 数据库中。",
     ),
+    (
+        "This layer belongs to a base image of the selected image",
+        "此层属于选定镜像的基础镜像的一部分",
+    ),  # deleted at version 4.44.3
+    ("This layer belongs to the selected image", "此层属于选定镜像的一部分"),  # deleted at version 4.44.3
     ("This link", "此链接"),
     (
         "This might make any data in the volume publicly accessible on Docker Hub.",
         "这可能会使卷中的任何数据在 Docker Hub 上公开可访问。",
     ),
+    (
+        "This migration allows us to fix the column width for the actions column in case Gordon is enabled",
+        "如果启用了 Gordon，此迁移允许我们修复操作列的列宽",
+    ),  # deleted at version 4.44.3
+    (
+        "This migration fixes the column order for the active builds grid after the author column was added",
+        "此迁移修复了添加作者列后的活跃构建网格的列顺序",
+    ),  # deleted at version 4.44.3
+    (
+        "This migration fixes the column order for the build history grid after the author column was added",
+        "此迁移修复了添加作者列后的构建历史网格的列顺序",
+    ),  # deleted at version 4.44.3
     ("This name is also used for the engine's Docker context.", "此名称也用于引擎的 Docker 上下文。"),
     (
         "This one is a simple web application. Select {0} in the {1} column to see it running.",
@@ -2703,6 +3282,10 @@ config = [
         "This overwrites the existing image with the volume's contents and deletes the previous image.",
         "这会用卷的内容覆盖现有镜像，并删除之前的镜像。",
     ),
+    (
+        "This page is used for manual testing, and by E2E tests that verify app-wide functionality. It can be reached via a modified Konami code: ↑↑↓↓←→←→BT",
+        "此页面用于手动测试，以及用于验证应用范围功能的 E2E 测试。可以通过修改后的 Konami 代码到达: ↑↑↓↓←→←→BT",
+    ),  # deleted at version 4.44.3
     ("This permanently deletes {0}?", "是否永久删除 {0}？"),
     ("This process could take several minutes.", "此过程可能需要几分钟。"),
     (
@@ -2719,7 +3302,7 @@ config = [
     ),
     (
         "This version of Docker Desktop is no longer supported. Update to the latest version for the best and most secure experience.",
-        "",
+        "不再支持此版本 Docker Desktop。更新到最新版本，以获得最佳和最安全的体验。",
     ),
     (
         "This version of Docker Desktop was installed from the Microsoft Store.",
@@ -2735,7 +3318,14 @@ config = [
     ),
     ("This will allow all future requests without asking for confirmation.", ""),
     ("This will change your Docker context to: '{0}'.", "这将会把您的 Docker 上下文更改为: '{0}'。"),
-    ("This will prevent the ability to install any other extension via the  Extension SDK tools.", ""),
+    (
+        "This will prevent the ability to install any other extension via the  Extension SDK tools.",
+        "这将阻止通过扩展 SDK 工具安装任何其他扩展。",
+    ),
+    (
+        "This will prevent the ability to install any other extension via the Extension SDK tools.",
+        "这将阻止通过扩展 SDK 工具安装任何其他扩展。",
+    ),  # deleted at version 4.44.3
     (
         "This will send you OS notifications when Docker Desktop is running on your computer.",
         "向您发送操作系统通知。（Docker Desktop 需要保持运行）",
@@ -2772,6 +3362,11 @@ config = [
         "为了转换和部署配置，当前项目的容器必须停止。这可以确保你不遇到任何端口问题。此过程可能需要几分钟。",
     ),
     (
+        "To create a Kubernetes cluster with kind, sign in to your Docker account.",
+        "要使用 kind 创建 Kubernetes 集群，请登录 Docker 账户。",
+    ),  # deleted at version 4.44.3
+    ("To do this, open a terminal and run:", "为此，请打开终端并运行: "),  # deleted at version 4.44.3
+    (
         "To enable image analysis powered by {0}, you need to pull this image to your local machine.",
         "要启用由 {0} 提供支持的镜像分析，你需要将此镜像拉取到本地机器。",
     ),
@@ -2783,12 +3378,20 @@ config = [
         "To improve build speeds for you, your team, and even your CI, {0}",
         "要提高你、你的团队甚至你的 CI 的构建速度，{0}",
     ),
+    (
+        "To install new binaries, you will be asked to enter your password.",
+        "要安装新的二进制文件，系统会要求你输入密码。",
+    ),  # deleted at version 4.44.3
     ("To learn how to pull and use a model in the cloud, view docs.", ""),
     ("To manage your installation, go to the Microsoft Store.", "要管理你的安装，请前往微软商店。"),
     (
         "To start a new build, run the following command in your source code location. {0}",
         "若要开始新的构建，请在源代码位置运行以下命令。{0}",
     ),
+    (
+        "To start a new build, run the following command in your source code location:",
+        "若要开始新的构建，请在源代码位置运行以下命令:",
+    ),  # deleted at version 4.44.3
     (
         "To start using Docker {0}, sign in and connect your account. As part of the closed beta, you'll have unlimited access to cloud resources for free.",
         "",
@@ -2814,6 +3417,7 @@ config = [
     ("Total build time", "总构建时间"),
     ("Total cloud video memory usage.{0}(limit {1})", ""),
     ("Total steps", "总步骤"),
+    ("Tray icon", "托盘图标"),  # deleted at version 4.44.3
     ("Trigger an analysis for detailed information about this image. {0}", "触发对此镜像的分析以获取详细信息。{0}"),
     ("Troubleshoot", "故障排除"),
     ("Troubleshooting", "故障排除"),
@@ -2823,13 +3427,15 @@ config = [
     ("Trusted content", "受信任的内容"),
     ("Try Project Harmonia", "尝试 Harmonia 项目"),
     ("Try adjusting the filters.", "尝试调整过滤器。"),
-    ("Try changing your search or clear it", ""),
+    ("Try changing your search or clear it", "尝试更改或清除搜索"),
     ("Try changing your search or enable servers from the catalog", ""),
+    ("Try our new self-diagnose tool", "尝试我们的新自我诊断工具"),  # deleted at version 4.44.3
     (
         "Try our {0}. If you still need help, use this form for Docker Desktop related issues. For other requests {1}.",
         "尝试我们的 {0}。如果你仍然需要帮助，请使用此表格提交与 Docker Desktop 相关的问题。对于其他请求 {1}。",
     ),
     ("Try selecting a different file.", "尝试选择不同的文件。"),
+    ("Turn on Dev Environments {0}", "打开开发环境 {0}"),  # deleted at version 4.44.3
     ("Turning off the Docker Engine...", "Docker 引擎关闭中..."),
     (
         "Turning this option off will uninstall all extensions and disable all extension features.",
@@ -2841,6 +3447,8 @@ config = [
     ),
     ("Type", "类型"),
     ("Type:", "类型:"),
+    ("Type: ", "类型:"),  # deleted at version 4.44.3
+    ("UPDATED FOLDER", "更新的文件夹"),  # deleted at version 4.44.3
     ("URL of the distributed storage backend.", "分布式存储后端的URL。"),
     ("Ulimits", None),
     ("Unable to connect to Docker Engine", "无法连接到 Docker 引擎"),
@@ -2870,6 +3478,10 @@ config = [
         "了解 Docker Compose 的基本要素以解锁高效的开发体验。您可以通读所有的产品内帮助，或将鼠标悬停在 Compose 文件上选择高亮关键字以获取更多信息。",
     ),
     (
+        "Understand the purpose of each instruction and how it affects your image.",
+        "理解每条指令的目的及其如何影响你的镜像。",
+    ),  # deleted at version 4.44.3
+    (
         "Understand your application's dependencies, analyze the vulnerabilities, and act quickly with suggested remediation options. {0} and {1}.",
         "了解应用的依赖关系，分析漏洞，并根据建议的补救选项快速采取行动。{0} 和 {1}。",
     ),
@@ -2887,6 +3499,10 @@ config = [
     ("Unknown error", "未知错误"),
     ("UnknownError", "未知错误"),
     ("Unless stopped", "直到手动停止"),
+    (
+        "Unlock next-level intelligence in the CLI and Docker Desktop with AI-powered expertise",
+        "利用由 AI 驱动的专业知识, 在命令行和 Docker Desktop 中解锁更高水平的智能",
+    ),  # deleted at version 4.44.3
     ("Unlock vulnerability scanning for greater security", "解锁漏洞扫描以提高安全性"),
     ("Unpublished", "未发布的"),
     ("Unsaved changes", "未保存的更改"),
@@ -2898,6 +3514,10 @@ config = [
     ("Update Docker Desktop", "更新 Docker Desktop"),
     ("Update and restart", "升级并重启"),
     ("Update seat allocations", "更新席位分配"),
+    (
+        "Update to the latest version of WSL 2 from Microsoft (Recommended - requires administrator password)",
+        "从 Microsoft 更新到最新版本的 WSL 2 （推荐 - 需要管理员密码）",
+    ),  # deleted at version 4.44.3
     ("Update version", "更新版本"),
     ("Updated {0}", "更新于 {0}"),
     ("Upgrade", "升级"),
@@ -2913,6 +3533,7 @@ config = [
     ("Uploading ...", "上传中..."),
     ("Uploading diagnostics{0}", "上传诊断信息中{0}"),
     ("Upper input", ""),
+    ("Url: ", "地址:"),  # deleted at version 4.44.3
     ("Use", "使用"),
     ("Use Docker Debug", "使用 Docker Debug"),
     (
@@ -2926,6 +3547,7 @@ config = [
     ),
     ("Use TLS and verify the remote.", "使用 TLS 并验证远程。"),
     ("Use TLS; implied by tlsverify", "使用 TLS; 由 tlsverify 实现"),
+    ("Use Virtualization framework", "使用虚拟化框架"),  # deleted at version 4.44.3
     (
         "Use WSL, Hyper-V or HCS for creating and managing Docker Desktop Linux VM. {0}",
         "使用 WSL, Hyper-V 或 HCS 以创建和管理Docker Desktop Linux VM。{0}",
@@ -2934,6 +3556,10 @@ config = [
         "Use a built image to run your container.  See the running container on Docker Desktop",
         "使用构建好的镜像来运行容器。在 Docker Desktop 上查看正在运行的容器",
     ),
+    (
+        "Use a container locally as a full development environment.",
+        "将容器用作完整的本地开发环境。",
+    ),  # deleted at version 4.44.3
     (
         "Use a more efficient kernel networking path for UDP. This may not be compatible with your VPN software.",
         "为 UDP 使用更高效的内核网络路径。这可能与您的 VPN 软件不兼容。",
@@ -2946,6 +3572,10 @@ config = [
     ("Use kernel networking for UDP", "为 UDP 使用内核网络"),
     ("Use nightly builds", "使用夜间构建版本"),
     ("Use proxy for Windows Docker daemon", "为 Windows Docker 守护进程使用代理"),
+    (
+        "Use recommended settings (requires administrator password)",
+        "使用建议的设置（需要管理员密码）",
+    ),  # deleted at version 4.44.3
     ("Use recommended settings (requires password)", "使用推荐设置（需要密码）"),
     ("Use string interpolation for variables", "为变量使用字符串插值"),
     ("Use system settings", "跟随系统"),
@@ -2962,6 +3592,10 @@ config = [
         "使用 {0}{1} 分析镜像并显示来自终端的漏洞。",
     ),
     ("Use userland proxy for loopback traffic.", "为回环流量使用用户态代理（userland proxy）。"),
+    (
+        "Use {0} or {1} for creating and managing Docker Desktop Linux VM in macOS 12.5 and above. {2}{3} is our most performant option for Apple Silicon Macs. {4}",
+        "在 macOS 12.5 及更高版本中，使用 {0} 或 {1} 创建和管理 Docker Desktop Linux 虚拟机（VM）。对于 Apple Silicon Mac，{2}{3} 是我们性能最佳的选择。{4}",
+    ),  # deleted at version 4.44.3
     ("Used", "已使用"),
     ("User", "用户安装"),
     ("User account", "用户"),
@@ -2975,6 +3609,10 @@ config = [
         "Users with a Pro, Team, or Business subscription can send a support request to Docker Support. {0} Make sure you copy the Diagnostics ID report and include it in your request.",
         "拥有 Pro、Team 或 Business 订阅的用户可以向 Docker 支持发送支持请求。{0} 请确保您复制了诊断 ID 报告并将其包含在请求中。",
     ),
+    (
+        "Uses Virtualization framework for creating and managing Docker Desktop Linux VM in macOS 12.5 and above.",
+        "在 macOS 12.5 及更高版本中，使用虚拟化框架创建和管理 Docker Desktop Linux 虚拟机（VM）。",
+    ),  # deleted at version 4.44.3
     ("Using", "使用"),
     ("Using Docker for work?", "使用 Docker 工作?"),
     ("VEX Statement", "VEX 声明"),
@@ -2990,10 +3628,13 @@ config = [
     ("Version number: {0}", "版本号: {0}"),
     ("Version {0}", "版本 {0}"),
     ("Version:", "版本:"),
+    ("Very satisfied", "非常满意"),  # deleted at version 4.44.3
+    ("Very unsatisfied", "非常不满意"),  # deleted at version 4.44.3
     ("View", "视图"),
     ("View Compose", "查看 Compose"),
     ("View Docker Scout dashboard", "查看 Docker Scout 仪表盘"),
     ("View Full Terms", "查看完整条款"),
+    ("View Scout dashboard", "查看 Scout 仪表板"),  # deleted at version 4.44.3
     ("View a select history of related builds.", "查看选中的相关构建历史。"),
     ("View all", "查看全部"),
     ("View all your running containers and applications.", "查看所有正在运行的容器和应用。"),
@@ -3007,6 +3648,8 @@ config = [
     ("View image in Docker Scout Dashboard", "在 Docker Scout 仪表盘中查看镜像"),
     ("View image packages and CVEs", "查看镜像软件包和漏洞"),
     ("View in Docker Hub", "在 Docker Hub 中查看"),
+    ("View in Github", "在 Github 上查看"),  # deleted at version 4.44.3
+    ("View in Hub", "在 Hub 中查看"),  # deleted at version 4.44.3
     ("View in Scout dashboard", "在 Scout 仪表盘中查看"),
     ("View logs and monitor your export activities", "查看日志并监控您的导出活动"),
     ("View more in the Learning center", "在学习中心查看更多信息"),
@@ -3014,6 +3657,7 @@ config = [
     ("View on Hub", "在 Hub 上查看"),
     ("View on Scout", "在 Scout 上查看"),
     ("View on scout.docker.com", "在 scout.docker.com 查看"),
+    ("View package locations", "查看软件包位置"),  # deleted at version 4.44.3
     ("View packages and CVEs", "查看软件包和漏洞"),
     ("View plans", "查看计划"),
     (
@@ -3036,17 +3680,23 @@ config = [
     ("VirtioFS", None),
     (
         "VirtioFS brings improved I/O performance for operations on bind mounts It can only be used with Docker VMM or Apple Virtualization framework",
-        "",
+        "VirtioFS 提高了绑定挂载操作的 I/O 性能。它只能与 Docker VMM 或 Apple Virtualization 框架一起使用。",
     ),
     (
         "VirtioFS brings improved I/O performance for operations on bind mounts. {0} It can only be used with Docker VMM or Apple Virtualization framework.",
-        "",
+        "VirtioFS 提高了绑定挂载操作的 I/O 性能。{0} 它只能与 Docker VMM 或 Apple Virtualization 框架一起使用。",
     ),
+    (
+        "VirtioFS brings improved I/O performance for operations on bind mounts. {0} It can only be used with {1} or {2}.",
+        "VirtioFS 提高了绑定挂载操作的 I/O 性能。{0} 它只能与 {1} 或 {2} 一起使用。",
+    ),  # deleted at version 4.44.3
     ("VirtioFS is only available with {0} or {1}", "VirtioFS 仅适用于 {0} 或 {1}"),
     ("Virtual Machine Options", "虚拟机选项"),
     ("Virtual file shares", "虚拟文件共享"),
     ("Virtualization support not detected", "未检测到虚拟化支持"),
     ("Visit Docker {0} Dashboard", "访问 Docker {0} 仪表板"),
+    ("Visual Studio Code", None),  # deleted at version 4.44.3
+    ("Visual Studio Code Remote Containers Extension", "Visual Studio Code 远程容器扩展"),  # deleted at version 4.44.3
     ("Visualizer", "可视化工具"),
     ("Volume Export", "卷导出"),
     ("Volume backup", "卷备份"),
@@ -3057,8 +3707,9 @@ config = [
     ("Volume name", "卷名"),
     ("Volumes", "卷"),
     ("Volumes ({0})", "卷（{0}）"),
-    ("Volumes can be used to store data outside of ephemeral containers.", ""),
+    ("Volumes can be used to store data outside of ephemeral containers.", "卷可用于在临时容器之外存储数据。"),
     ("Volumes management", "卷管理"),
+    ("VsCode", None),  # deleted at version 4.44.3
     ("Vulnerabilities", "漏洞"),
     ("Vulnerabilities ", "漏洞 "),
     ("Vulnerability", "漏洞"),
@@ -3091,7 +3742,9 @@ config = [
     ("We couldn't load the oauth providers.", ""),
     ("We couldn't load your enabled servers.", ""),
     ("We encountered an issue loading this content.", "我们遇到了加载此内容的问题。"),
+    ("We found your project", "我们找到了你的项目"),  # deleted at version 4.44.3
     ("We recommend signing in with your work email address.", "我们建议使用你工作电子邮箱登录。"),
+    ("We run `wsl --update` for you.", "正在为你运行 'wsl --update' 命令。"),  # deleted at version 4.44.3
     (
         "We're sorry to see you go. This completely uninstalls Docker Desktop.",
         "我们遗憾看到你离开。这将完全卸载 Docker Desktop。",
@@ -3104,6 +3757,7 @@ config = [
     ("Welcome to Docker", "欢迎来到 Docker"),
     ("Welcome to Docker Desktop", "欢迎来到 Docker Desktop"),
     ("Welcome to the Docker {0} closed beta", ""),
+    ("What is Docker Scout?", "什么是 Docker Scout？"),  # deleted at version 4.44.3
     ("What is Project Harmonia?", "什么是 Harmonia 项目？"),
     ("What is a container?", "什么是容器？"),
     ("What will you use Docker for?", "您将使用 Docker 来做什么？"),
@@ -3112,16 +3766,26 @@ config = [
     ("What's next?", "下一步是什么？"),
     ("What's your role?", "你的角色是?"),
     (
+        "When cloning a Git repository using SSH, ensure you've added your SSH key to the ssh-agent.",
+        "当使用 SSH 克隆 Git 存储库时，确保你已将 SSH 密钥添加到 ssh-agent。",
+    ),  # deleted at version 4.44.3
+    (
         "When developing with Docker, you may need to automatically update and preview your running services as you edit and save your code. We use docker compose watch for this.",
         "使用 Docker 进行开发时，你可能需要在编辑和保存代码时自动更新和预览正在运行的服务。我们使用 Compose Watch 实现这一点。",
     ),
+    (
+        'When installing Docker Desktop with the {0}, in-app updates are disabled to ensure your organization maintains the required version. To update, download the latest installer from the {1} under "Security and Access"',
+        '当使用 {0} 安装 Docker Desktop 时，应用内更新会被禁用以确保您的组织保持所需的版本。要进行更新，请从"安全与访问"下的 {1} 下载最新的安装程序',
+    ),  # deleted at version 4.44.3
     ("When the build completes, the project history will display here.", "构建完成后，项目历史记录将显示在此处。"),
     (
         "When working with containers, you usually need to create a {0} to define your image and a {1} file to define how to run it.",
         "在使用容器时，您通常需要创建一个 {0} 来定义您的镜像，以及一个 {1} 文件来定义如何运行它。",
     ),
+    ("Window focus", "窗口焦点"),  # deleted at version 4.44.3
     ("Windows Containers", "Windows 容器"),
     ("With Nginx & MySQL", "与 Nginx 和 MySQL 一起使用"),
+    ("With existing code & Dockerfiles", "与现有代码和 Dockerfile"),  # deleted at version 4.44.3
     ("Work email address", "工作电子邮箱"),
     ("Working directory", "工作目录"),
     ("Wrap Lines", ""),
@@ -3130,6 +3794,7 @@ config = [
     ("Yes, move it", "是，移动"),
     ("Yes, reset anyway", "是，重置"),
     ("Yes, resize anyway", "是，调整大小"),
+    ("You are a helpful assistant", None),  # deleted at version 4.44.3
     (
         "You are about to delete the build history for this builder. This action cannot be undone.",
         "您即将删除此构建器的构建历史记录。此操作无法撤销。",
@@ -3138,6 +3803,14 @@ config = [
     ("You are about to delete the network '{0}'.", "您即将删除网络 '{0}'。"),
     ("You are about to delete the volume '{0}' and all its data.", "你即将删除卷 '{0}' 及其所有数据。"),
     ("You are about to delete the {0} {1}.", "您将要删除 {0} {1}。"),
+    (
+        "You are about to remove the container '{0}' and all its data.",
+        "你即将删除容器 '{0}' 及其所有数据。",
+    ),  # deleted at version 4.44.3
+    (
+        "You are about to remove the dev environment '{0}' and all its containers.",
+        "你即将删除开发环境 '{0}' 及其所有容器。",
+    ),  # deleted at version 4.44.3
     (
         "You are about to restart Docker Desktop. A restart stops all running containers. No data will be lost otherwise.\\n\\nDo you want to continue?",
         "您即将重新启动 Docker Desktop。重新启动会停止所有正在运行的容器。但不会丢失任何数据。\\n是否继续？",
@@ -3175,7 +3848,10 @@ config = [
         "You can either build an image from a Dockerfile, or download an existing image to run",
         "您可以从 Dockerfile 构建镜像，也可以下载现有镜像以运行",
     ),
-    ("You can either build an image from a Dockerfile, or use an existing image from Docker Hub.", ""),
+    (
+        "You can either build an image from a Dockerfile, or use an existing image from Docker Hub.",
+        "您可以从 Dockerfile 构建镜像，也可以使用 Docker Hub 上已有的镜像",
+    ),
     (
         "You can explore the following documentation for details about Docker Scout:{0}",
         "您可以浏览以下文档，了解有关监控的详情:{0}",
@@ -3186,6 +3862,10 @@ config = [
         "You can now use the container's environment while working on the app locally. Any changes you make on your computer will show up in the container. In your project folder, open {0} using a text editor or an Integrated Development Environment (IDE), such as VS Code. Find the text that says {1} change it, and save the file. Then go to {2} in your browser or refresh the page to see the update.",
         "",
     ),
+    (
+        "You can open you favourite IDE and start coding",
+        "你可以打开你喜欢的 IDE 并开始编码",
+    ),  # deleted at version 4.44.3
     (
         "You can search images by selecting the bar at the top, or by using the {0} shortcut. Search for {1} to find the image used in this guide.",
         "你可以通过选择顶部的搜索栏，或使用 {0} 快捷键搜索。搜索 {1} 以找到该指南中使用的镜像。",
@@ -3200,6 +3880,10 @@ config = [
         "You create an image from Dockerfile and your code, then the image is used to run a container",
         "你可以从 Dockerfile 和你的代码创建镜像，然后使用该镜像运行容器",
     ),
+    (
+        "You currently have access to the following experimental features:",
+        "你目前可以访问以下实验功能:",
+    ),  # deleted at version 4.44.3
     (
         "You don't have any WSL 2 distros installed. Please convert a WSL 1 distro to WSL 2, or install a new distro and it will appear here. {0}",
         "未安装任何 WSL2 发行版。请将 WSL1 发行版转换为 WSL2，或安装新的发行版，它将在此处显示。{0}",
@@ -3256,7 +3940,12 @@ config = [
         "您将始终收到错误通知和 Docker Desktop 新版本及更新的相关通知。",
     ),
     ("You'll always receive notifications about zero-day vulnerabilities", "您将始终收到有关零日漏洞的通知"),
+    (
+        "You'll need to manually update WSL 2 and then relaunch Docker Desktop to complete set up.",
+        "你需要手动更新 WSL 2，然后重新启动 Docker Desktop 以完成设置。",
+    ),  # deleted at version 4.44.3
     ("You're about to pull {0}, create a new container, and run it.", "您即将拉取 {0}，创建一个新的容器并运行它。"),
+    ("You're all set", "一切就绪"),  # deleted at version 4.44.3
     ("You're currently securing {0} {1}. {2}", "您当前正在保护 {0} {1}。{2}"),
     ("You're up to date", "当前是最新版"),
     (
@@ -3291,6 +3980,7 @@ config = [
     ("authorize with the {0} OAuth provider", ""),
     ("build", "构建"),
     ("change your preferences in Settings", "在设置中更改您的首选项"),
+    ("click here", "点击这里"),  # deleted at version 4.44.3
     ("compose watch documentation", "compose watch 文档"),
     ("compose.yaml", None),
     ("configuration file", "配置文件"),
@@ -3310,6 +4000,7 @@ config = [
     ("error logs", "错误日志"),
     ("for {0} ", "{0}"),
     ("have your administrator upgrade your plan", "让管理员升级您的计划"),
+    ("https://", None),  # deleted at version 4.44.3
     ("https://github.com/docker/bindmount-apps", None),
     ("https://github.com/docker/multi-container-app", None),
     ("https://github.com/docker/welcome-to-docker", None),
@@ -3324,6 +4015,7 @@ config = [
     ("self-diagnose tool", "自诊断工具"),
     ("subscription", "订阅"),
     ("the Microsoft WSL documentation", "微软 WSL 文档"),
+    ("these steps", "这些步骤"),  # deleted at version 4.44.3
     ("todo-app", None),
     ("todo-database", None),
     ("troubleshooting page", "故障排除页面 "),
@@ -3338,6 +4030,7 @@ config = [
     ("wsl --update", None),
     ("{0} ", None),
     ("{0} (ID: {1})", None),
+    ("{0} (UDP)", None),  # deleted at version 4.44.3
     ("{0} ({1})", None),
     ("{0} / {1} ({2} %)", None),
     ("{0} Back", "{0} 返回"),
@@ -3363,6 +4056,7 @@ config = [
     ("{0} has exceeded the available Docker {1} budget.", ""),
     ("{0} hidden features ({1})", ""),
     ("{0} of {1} GiB", ""),
+    ("{0} ready to be installed.", "{0} 准备就绪可以安装。"),  # deleted at version 4.44.3
     ("{0} requires both config and secrets to work", ""),
     ("{0} requires config to work", ""),
     ("{0} requires secrets to work", ""),
@@ -3410,6 +4104,7 @@ config = [
         "{0}查看当前构建与多达 30 个相关构建的比较情况。",
     ),
     ("{0}This image isn't supported", "{0}此镜像不受支持"),
+    ("{0}Update base image", "{0}更新基础镜像"),  # deleted at version 4.44.3
     ("{0}View request", "{0}查看请求"),
     ("{0}View response", "{0}查看响应"),
     ("{0}You can connect an MCP client to a specific project:", ""),
@@ -3425,589 +4120,4 @@ config = [
     ),
     ("{0}\u2009*", None),
     ("\u2009*", None),
-    # ==============================# old #==============================#
-    ("    ssh-add <path to your private ssh key>", "    ssh-add <你的 ssh 私钥路径>"),
-    (
-        " Create a cluster containing one or more nodes with kind. Must be signed in to your Docker account. Requires the {0}",
-        " 使用 kind 创建包含单节点或多节点的集群。必须登录到您的 Docker 帐户。需要 {0}",
-    ),
-    (" OPEN IN VSCODE ", None),
-    ('"{0}" will have {1} {2} violations.', '"{0}" 将会有 {1} {2} 违规。'),
-    ("(source: {0})", "（源: {0}）"),
-    ("A unified workflow to run and manage containerized projects", "运行和管理容器化项目的统一工作流"),
-    ("AI Playground", "AI 游乐场"),
-    ("Aborted due to condition callback returning false.", "由于条件回调返回 false 而中止。"),
-    ("Accept and enable", "接受并启用"),
-    ("Access experimental features", "访问实验性功能"),
-    ("Add Extensions", "添加扩展"),
-    ("Adds access to your Docker containers, images and volumes", "添加对 Docker 容器、镜像和卷的访问权限"),
-    ("Adds access to your Kubernetes cluster", "添加对 Kubernetes 集群的访问权限"),
-    ("Admin Console", "管理控制台"),
-    ("Advanced options", "高级选项"),
-    ("Advanced settings - optional", "高级设置 - 可选"),
-    ("Affected range:", "受影响范围:"),
-    ("Alias: ", "别名: "),
-    ("All stacks and Kubernetes resources will be deleted.", "所有堆栈和 Kubernetes 资源都将被删除。"),
-    ("Already have Git installed? Resolve by following\xa0{0}.", "已经安装了 Git ？通过以下方式解决\xa0{0}。"),
-    ("An all-in-one container workflow", "多合一容器工作流"),
-    (
-        "As you work with Docker, you can run services, view logs, create and modify your run commands here",
-        "在使用 Docker 时，您可以在这里运行服务、查看日志、创建和修改运行命令",
-    ),
-    (
-        "Ask Gordon is your personal AI assistant embedded in Docker Desktop and the Docker CLI. It's designed to streamline your workflow and help you make the most of the Docker ecosystem.",
-        "问 Gordon 是嵌入在 Docker Desktop 和 Docker 命令行中的个人 AI 助手。它旨在简化您的工作流程，并帮助您充分利用 Docker 生态系统。",
-    ),
-    (
-        "Ask any question about Docker to your personal AI. Learn how to improve your workflow and better leverage the Docker ecosytem.",
-        "向你的个人 AI 询问有关 Docker 的任何问题。学习如何改进你的工作流程并更好地利用 Docker 生态系统。",
-    ),
-    ("Author: ", "作者:"),
-    ("Automatically (edits your shell configuration)", "自动（编辑你的 Shell 配置）"),
-    (
-        "Automatically starts SBOM indexing newly built or pulled images, and when an image is inspected.",
-        "当新构建、拉取以及检查镜像时自动启动 SBOM 索引。",
-    ),
-    ("Basic UI", "基本 UI"),
-    (
-        "Beta features are initial releases of potential future features. Users who participate in our beta programs have the opportunity to validate and provide feedback on future functionality. This helps us focus our efforts on what provides the most value to our users.",
-        "Beta 功能是潜在的未来功能的初始版本。参与我们 beta 计划的用户有机会验证并提供有关未来功能的反馈。这有助于我们将精力集中为用户提供最大价值。",
-    ),
-    ("Beta features can be discontinued without notice. {0}", "Beat 功能可能在没有通知的情况下停用。{0}"),
-    ("Bugsnag", None),
-    ("Building image...", "构建镜像中..."),
-    ("Building...", "构建中..."),
-    (
-        "By default, Docker daemon is not using the configured proxy when it is running in Windows containers mode. In order to achieve this, an intermediary proxy must be exposed on tcp://localhost:<port>. {0} Leave 0 (zero) for assigning a random port. {1} A new random port will be assigned on each application start, unless it is locked via admin settings.",
-        "默认情况下，Docker 守护程序在 Windows 容器模式下运行时不使用配置的代理。为了实现这一点，必须在 tcp://localhost:<port> 上暴露一个中间代理。{0} 输入 0（零）分配随机端口。{1} 每次应用启动时都会分配一个新的随机端口，除非通过管理员设置锁定。",
-    ),
-    ("CVE in additional layers (added on top of the base image)", "附加层中的漏洞（添加在基础镜像之上）"),
-    ("CVE severity", "漏洞严重性"),
-    ("CVSS Vector:", "CVSS 向量:"),
-    ("Cannot change shared directories", "无法更改共享目录"),
-    ("Change the Kubernetes cluster node count?", "更改 Kubernetes 集群节点树？"),
-    ("Change the Kubernetes cluster version?", "更改 Kubernetes 集群版本？"),
-    (
-        "Changing the cluster version deletes the current cluster and creates a new one.",
-        "更改集群版本会删除当前集群并创建一个新集群。",
-    ),
-    (
-        "Changing the number of nodes deletes the current cluster and creates a new one.",
-        "更改节点数量将删除当前集群并创建一个新集群。",
-    ),
-    ("Check the status of Docker services.", "检查 Docker 服务状态。"),
-    ("Choose IDE", "选择 IDE"),
-    ("Choose Internet Protocol version for the Docker VM", "为 Docker 虚拟机（VM）选择互联网协议版本"),
-    ("Choose source", "选择源"),
-    ("Choose your preferred WSL configuration: {0}", "选择你的 WSL 首选设置项: {0}"),
-    ("Clone & open", "克隆并打开"),
-    ("Clone Git repository", "克隆 Git 存储库"),
-    ("Clone Project", "克隆项目"),
-    ("Clone Protocol", "克隆协议"),
-    ("Clone git", "克隆 Git"),
-    ("Clone git repository", "克隆 Git 存储库"),
-    ("Clone project to folder", "克隆项目到文件夹"),
-    (
-        "Cloud storage is exclusively available for business accounts. Please contact your admin to be added to the business Docker account.",
-        "云存储仅对企业账户开放。请联系你的管理员将你添加到企业 Docker 账户中。",
-    ),
-    ("Command to run", "要运行的命令"),
-    ("Commands to execute before running the project", "运行项目前要执行的命令"),
-    ("Community Forums", "社区论坛"),
-    (
-        "Compose V2 integrates with the Docker CLI and can be run as 'docker compose'. Checking this setting aliases '/usr/local/bin/docker-compose' to 'docker compose' for improved compatibility with other applications and scripts.",
-        "Compose V2 与 Docker 命令行集成，可以作为 'docker compose' 运行。选中此设置会将 '/usr/local/bin/docker-compose' 别名为 'docker compose'，以便与其他应用和脚本更好地兼容。",
-    ),
-    (
-        "Compose automatically uses {0} for bind mounts in Compose projects.",
-        "Compose 自动使用 {0} 用于 Compose 项目中的绑定挂载。",
-    ),
-    ("Compose files", "Compose 文件"),
-    ("ConfigFrom - Optional", "配置来自 - 可选"),
-    ("Configure how your project runs{0}", "配置你的项目如何运行{0}"),
-    ("Configure your project", "配置你的项目"),
-    ("Connected to Cloud: {0}", "连接到 Docker 云: {0}"),
-    ("Container ports", "容器端口"),
-    (
-        "Container slice integrity assumptions violated. Please inform the frontend platform team. Violations: {0}",
-        "容器切片违反了完整性假设。请通知前端平台团队。违反行为: {0}",
-    ),
-    ("Containerize my application", "容器化我的应用"),
-    ("Create a Dev Environment", "创建开发环境"),
-    (
-        "Create a fresh clone of a Git repository from an HTTPS or SSH URL. Pull Request URLs are also supported.",
-        "从 HTTPS 或 SSH URL 创建 Git 存储库克隆。也支持 Pull Request URL。",
-    ),
-    ("Create a new environment", "创建新环境"),
-    ("Create a singe-node cluster with kubeadm.", "使用 kubeadm 创建单节点集群。"),
-    ("Create failed", "创建失败"),
-    ("Create project", "创建项目"),
-    (
-        "Create the assets needed to run your existing application in a containerized environment.",
-        "创建在容器化环境中运行现有应用所需的资源。",
-    ),
-    (
-        "Creates /var/run/docker.sock which some third-party clients may use to communicate with Docker Desktop. {0}",
-        "创建 /var/run/docker.sock，某些第三方客户端可能会使用它与 Docker Desktop 进行通信。 {0}",
-    ),
-    ("Current version: {0} ({1}){2}New version: {3} ({4}){5}", "当前版本: {0} ({1}){2}新版本: {3} ({4}){5}"),
-    ("DURATION", "持续时间"),
-    ("Decline", "拒绝"),
-    ("Default Engine", "默认引擎"),
-    ("Define how your project runs", "定义你的项目如何运行"),
-    (
-        "Define your project's configuration as code, distribute your project easily amongst your team, and have everyone work on the same code and any dependencies with one click.",
-        "将项目配置定义为代码，轻松在团队中分发项目，并让每个人只需点击一下就能在同样的代码和任何依赖项上工作。",
-    ),
-    ("Define. Distribute. Iterate.", "定义。分发。迭代。"),
-    ("Delete model?", "删除模型？"),
-    ("Delete project", "删除项目"),
-    ("Deploy the Kubernetes Dashboard into cluster", "将 Kubernetes 仪表板部署到集群中"),
-    ("Details page for unpublished extension", "未发布扩展的详细信息页面"),
-    ("Dev Environments", "开发环境"),
-    ("Disconnect from Docker Cloud", "从 Docker 云断开连接"),
-    ("Display the Dev Environments view in the Docker Dashboard. {0}", "在 Docker 面板中显示开发环境视图。{0}"),
-    ("Docker", None),
-    ("Docker AI Supplemental Terms", "Docker AI 补充条款"),
-    (
-        "Docker AI provides advanced capabilities to help optimize your workflows. To enable these features, you must agree to the {0}, which explain how your data will be processed, stored, and used by Docker’s AI services.",
-        "Docker AI 提供了高级功能来帮助优化您的工作流。要启用这些功能，您必须同意 {0}，它解释了您的数据将如何被 Docker AI 服务处理、存储和使用。",
-    ),
-    (
-        "Docker AI provides advanced capabilities to help optimize your workflows. To enable these features, you must agree to the {0}, which explain how your data will be processed, stored, and used by Docker’s AI services. Review these terms carefully before proceeding.",
-        "Docker AI 提供了高级功能来帮助优化您的工作流。要启用这些功能，您必须同意 {0}，它解释了您的数据将如何被 Docker AI 服务处理、存储和使用。在继续之前请仔细阅读这些条款。",
-    ),
-    ("Docker AI terms", "Docker AI 条款"),
-    (
-        "Docker Desktop has encountered an unexpected error and needs to close, but was unable to gather information about the error that has occurred due to an internal problem.\\n\\nThis most likely means that the services supporting Docker Desktop have exited unexpectedly.\\n\\n Restart Docker Desktop and try again. If the issue persists, [collect diagnostics and submit an issue](https://docs.docker.com/desktop/troubleshoot/overview/#diagnose-from-the-terminal).",
-        "Docker Desktop 遇到了一个意外错误并需要关闭，但由于内部问题无法收集相关错误信息。\\n\\n这很可能意味着 Docker Desktop 服务已意外退出。\\n\\n重启 Docker Desktop 并重试。如果问题仍然存在，请[收集诊断信息并提交问题](https://docs.docker.com/desktop/troubleshoot/overview/#diagnose-from-the-terminal)。",
-    ),
-    ("Docker Desktop starting...", "Docker Desktop 启动中..."),
-    ("Docker Dev Environment", "Docker 开发环境"),
-    ("Docker Project", "Docker 项目"),
-    ("Docker Projects illustrations", "Docker 项目插图"),
-    ("Docker Projects run command illustration", "Docker 项目运行命令插图"),
-    ("Docs", "文档"),
-    ("Document vulnerability exceptions", "记录漏洞例外情况"),
-    ("Don't override", "不覆盖"),
-    ("Done", "完成"),
-    ("EPSS Score", "EPSS 分数"),
-    (
-        "Easily access logs, manage files, and oversee networks － everything for a seamless Docker workflow in one place",
-        "轻松访问日志、管理文件和监督网络 —— 所有这些都集中在一个无缝的 Docker 工作流中",
-    ),
-    ("Easily run and manage all your Docker projects", "轻松运行和管理所有的 Docker 项目"),
-    ("Edit command", "编辑命令"),
-    (
-        'Enable "Ask Gordon" feature in Docker Desktop and CLI. {0}',
-        '在 Docker Desktop 和命令行中启用 "问 Gordon" 功能。{0}',
-    ),
-    ("Enable Compose Bridge command line", "启用 Compose Bridge 命令行"),
-    ("Enable Docker AI {0}", "启用 Docker AI {0}"),
-    ("Enable Gordon", "启用 Gordon"),
-    ("Enable background SBOM indexing", "启用后台 SBOM 索引"),
-    ("Enable image SBOM indexing.", "启用镜像 SBOM 索引。"),
-    (
-        "Enhance security by preventing containers from breaching the Linux VM. {0}",
-        "通过防止容器破坏 Linux 虚拟机（VM）来增强安全性。{0}",
-    ),
-    (
-        "Enhanced Container Isolation on WSL requires WSL 2 version 1.1.3.0 or above",
-        "WSL 上的增强容器隔离需要 WSL 2 版本 1.1.3.0 或更高版本",
-    ),
-    ("Enter a project name below", "请输入下方的项目名称"),
-    ("Enter your prompt", "输入你的提示"),
-    ("Env", "环境"),
-    ("Error loading README. Re-open project to try again.", "加载 README 时出错。重新打开项目重试。"),
-    ("Error loading image: {0}{1}", "加载镜像时出错: {0}{1}"),
-    ("Exception applied", "已应用的例外"),
-    ("Exec", "执行"),
-    ("Exec in CLI", "在命令行中运行"),
-    ("Execute", "执行"),
-    ("Existing Git repo", "现有 Git 存储库"),
-    ("Expand", "展开"),
-    ("Experimental", "实验性"),
-    ("Experimental features can be discontinued without notice. {0}", "实验性功能可能在没有通知的情况下停用。{0}"),
-    ("Explain my Dockerfile", "解释我的 Dockerfile"),
-    (
-        "Exploit Prediction Scoring System predicts the likelihood of a vulnerability being exploited, helping you prioritize security fixes",
-        "漏洞利用预测评分系统（EPSS）预测漏洞被利用的可能性，帮助你优先处理安全修复",
-    ),
-    ("Explore image on GitHub", "在 GitHub 上探索镜像"),
-    ("FROM {0}", None),
-    ("Failed", "已失败"),
-    ("Failed to load layers", "加载层失败"),
-    ("Featured", None),
-    ("Features in development", "开发中的功能"),
-    ("Fix this CVE in base image:", "在基础镜像中修复此漏洞:"),
-    ("Fix version", "修复版本"),
-    ("Focus this window", "聚焦此窗口"),
-    ("Folder path template", "文件夹路径模板"),
-    ("Get Started", "开始使用"),
-    ("Get help from the community.", "从社区获得帮助。"),
-    ("Git", None),
-    ("Git not installed", "Git 未安装"),
-    ("Gordon needs to know where to look for files.", "Gordon 需要知道在哪里寻找文件。"),
-    ("HTTPS", None),
-    ("Hide advanced options", "隐藏高级选项"),
-    (
-        "Host networking allows containers that are started with --net=host to use localhost to connect to TCP and UDP services on the host. It will automatically allow software on the host to use localhost to connect to TCP and UDP services in the container.",
-        "主机网络允许以 --net=host 启动的容器使用 localhost 连接到主机上的 TCP 和 UDP 服务。它将自动允许主机上的软件使用 localhost 连接到容器中的 TCP 和 UDP 服务。",
-    ),
-    (
-        "Host networking allows containers that are started with --net=host to use localhost to connect to TCP and UDP services on the host. It will automatically allow software on the host to use localhost to connect to TCP and UDP services in the container. Sign in required.",
-        "主机网络允许以 --net=host 启动的容器使用 localhost 连接到主机上的 TCP 和 UDP 服务。它将自动允许主机上的软件使用 localhost 连接到容器中的 TCP 和 UDP 服务。需要登录。",
-    ),
-    ("Host ports", "主机端口"),
-    ("How do I run Redis?", "我如何运行 Redis？"),
-    ("How would you rate your experience here today?", "你今天在这里的体验如何评价？"),
-    ("How's everything going?", "一切进展如何？"),
-    ("Hub repositories", "Hub 存储库"),
-    ("IPV4 gateway", "IPV4 网关"),
-    ("IPV4 gateway: ", "IPV4 网关:"),
-    ("IPV4 subnet", "IPV4 子网"),
-    ("IPv4 only (legacy)", "仅 IPv4（旧版）"),
-    (
-        "IPv6 is the newest version of the Internet Protocol suite, proposed in {0} in 1998 (and later updated in {1} in 2017). During the transitional period while IPv6 is rolling out, apps should be designed to work with both IPv4 and IPv6. Note this configures the Docker VM, not the Docker engine or containers.",
-        "IPv6 是互联网协议套件的最新版本，于 1998 年在 {0} 提出（并在 2017 年于 {1} 更新）。在 IPv6 推出的过渡期内，应用程序应设计为既支持 IPv4 又支持 IPv6。注意，这配置的是 Docker 虚拟机（VM），而不是 Docker 引擎或容器。",
-    ),
-    (
-        "If you are not using Docker for work purposes, and believe this is a mistake, {0} to get unblocked.",
-        "如果您没有将 Docker 作为商业用途使用，并认为这是一个错误，{0} 以得到解锁。",
-    ),
-    ("Image hierarchy", "镜像层级结构"),
-    ("Image options", "镜像选项"),
-    ("Images ", "镜像"),
-    ("Import a git repository", "导入 Git 存储库"),
-    (
-        "In each release, we may add features that we are currently experimenting with. These features are in the early stages of the product development lifecycle. This allows us to get early feedback and adjust the features as we work on them, so that we create experiences that our users love. If you turn this off, you lose access to experimental features.",
-        "在每个版本中，我们可能会添加一些实验性功能。这些功能处于产品开发生命周期的早期阶段，这使我们能够尽早获得反馈并调整功能，以便我们创造用户喜欢的体验。如果关闭此功能，则无法访问实验功能。",
-    ),
-    ("Install tester extension", "安装测试扩展"),
-    (
-        "It seems there were some problems when trying to load Desktop Extensions. Please close the window and try again later.",
-        "尝试加载 Desktop 扩展时似乎出现了一些问题。请关闭窗口后重试。",
-    ),
-    ("Key", None),
-    ("LATENCY", "延迟"),
-    ("Layers {0}", "层级（Layers）{0}"),
-    ("Learn about Projects", "了解项目"),
-    ("Learn how to use Docker.", "学习如何使用 Docker。"),
-    (
-        "Lets you resolve *.docker.internal DNS names from both the host and your containers. {0}",
-        "允许您从主机和容器中解析 *.docker.internal DNS 名称。{0}",
-    ),
-    ("License: ", "许可:"),
-    (
-        "Limit to the amount of disk space the engine can use, including overheads.",
-        "限制引擎可以使用的磁盘空间量，包括间接使用。",
-    ),
-    ("Link existing folder", "关联现有文件夹"),
-    ("Link project with folder", "将项目与文件夹关联"),
-    ("Loading Docker projects", "加载 Docker 项目"),
-    ("Local directory", "本地目录"),
-    ("Local image{0}{1}", "本地镜像{0}{1}"),
-    ("Local path", "本地路径"),
-    ("Location: ", "位置:"),
-    ("Looks like this repository is already associated with a Project", "看起来此存储库已经与一个项目关联"),
-    ("Make sure you have your tools installed!", "确保已安装所需工具！"),
-    ("Manage Extensions", "管理扩展"),
-    ("Manage Synchronized file shares with Compose", "使用 Compose 管理同步的文件共享"),
-    (
-        "Manage your Kubernetes cluster and apps easily with the Kubernetes Dashboard. Requires an internet connection. {0}",
-        "使用 Kubernetes 仪表板轻松管理您的 Kubernetes 集群和应用程序。需要互联网连接。{0}",
-    ),
-    ("Manually update WSL 2 myself", "手动更新 WSL 2"),
-    ("Memory limit:", "内存限制:"),
-    ("Message Gordon", "发送消息给 Gordon"),
-    ("More examples", "更多示例"),
-    (
-        "Move quickly between branches or run them side by side in VSCode.",
-        "快速在分支之间切换或在 VSCode 中并排运行它们。",
-    ),
-    ("My Extensions{0}", "我的扩展{0}"),
-    ("NEW", "新"),
-    (
-        "New binaries are available to be installed which are used to extend Docker Desktop functionality.",
-        "新的二进制文件可用于安装，以扩展 Docker Desktop 功能。",
-    ),
-    ("New binaries available", "新的二进制文件可用"),
-    ("New conversation", "新的对话"),
-    ("New run command", "新的运行命令"),
-    ("Newer image available", "新的镜像可用"),
-    ("No", "否"),
-    ("No README found in project folder.", "在项目文件夹中找不到 README。"),
-    ("No Vulnerabilities Found", "未发现漏洞"),
-    ("No access to repository or invalid repository", "无法访问存储库或存储库无效"),
-    ("No local copy", "无本地副本"),
-    ("No packages were added\\n              ", "未添加任何软件包\\n              "),
-    ("No services found", "未找到服务"),
-    ("No source was found in this build's meta data", "在此构建的元数据中未找到源"),
-    ("No vulnerabilities ", "没有漏洞"),
-    ("Not running", "未运行"),
-    ("Not sure what to ask? Try out one of the following questions:", "不确定要问什么？试试以下问题:"),
-    ("Not yet available", "尚未可用"),
-    (
-        "Now, you can take advantage of the container’s environment while you develop the app on your local system. Any changes you make to the app on your local system are reflected in the container. In your local directory, open {0} in an IDE or text editor, update the {1} string, and save the file. Visit or refresh {2} to see the changes.",
-        "现在你可以利用容器中的环境并在你的本地系统中进行开发。你在本地系统上对该应用做出的任意更改都会反应在容器中。在你的本地目录中使用 IDE 或文本编辑器打开 {0} ，更新字符串 {1} 并保存。访问或者刷新 {2} 以查看更改。",
-    ),
-    ("Open Project", "打开项目"),
-    ("Open Project Folder", "打开项目文件夹"),
-    ("Open a local folder", "打开本地文件夹"),
-    ("Open a project folder", "打开项目文件夹"),
-    ("Open folder", "打开文件夹"),
-    ("Open local folder", "打开本地文件夹"),
-    ("Open project", "打开项目"),
-    ("Optimize my Dockerfile", "优化我的 Dockerfile"),
-    ("Or try running a sample...", "或者尝试运行一个示例..."),
-    ("Or you can use an {0} Git repository URL.", "或者，你可以使用 {0} Git 存储库 URL。"),
-    (
-        "Overcome local resource limits by shifting your development workloads to the cloud. Project Harmonia in Docker Desktop lets you continue using your existing tools and accessing applications via localhost, all while benefiting from unlimited system resources and GPU-accelerated cloud engines.",
-        "将开发工作负载转移到云端来克服本地资源限制。Docker Desktop 中的 Harmonia 项目让你继续使用现有的工具并通过 localhost 访问应用程序，同时受益于无限的系统资源和 GPU 加速的云引擎。",
-    ),
-    ("Package", "软件包"),
-    ("Package name", "软件包名称"),
-    ("Package type", "软件包类型"),
-    ("Packages: {0}", "软件包: {0}"),
-    ("Path to directory", "目录路径"),
-    ("Pick a local destination for your project", "为您的项目选择一个本地目的地（Destination）"),
-    ("Pick the owner, and give your project a memorable name.", "选择拥有者，并为你的项目取一个令人难忘的名字。"),
-    ("Playground", "游乐场"),
-    ("Please select a folder.", "请选择一个文件夹"),
-    ("Please sign in to use Docker Desktop.", "请登录以使用 Docker Desktop。"),
-    ("Policy impact:", "策略影响:"),
-    ("Project Destination", "项目目的地（Destination）"),
-    ("Project Name", "项目名称"),
-    ("Project name", "项目名称"),
-    ("Project name and owner", "项目名称和拥有者"),
-    ("Project name template", "项目名称模板"),
-    ("Projects", "项目"),
-    ("Projects are connected to your Docker account.", "项目已连接到你的 Docker 帐户。"),
-    ("Publish date:", "发布日期:"),
-    ("README", None),
-    ("RFC 2460", None),
-    ("RFC 8200", None),
-    ("Rate my Dockerfile", "评估我的 Dockerfile"),
-    (
-        "Rate the quality of your Dockerfile and get suggestions for improvements.",
-        "评估你的 Dockerfile 质量并获得改进建议。",
-    ),
-    ("Read Docker AI Supplemental Terms", "阅读 Docker AI 补充条款"),
-    (
-        "Read about how Docker Hub usage plans will be changing and how your usage fits into these updates.",
-        "了解 Docker Hub 使用计划将如何变化，以及你的使用如何适应这些更新。",
-    ),
-    ("Ready", "准备就绪"),
-    ("Rebuild & restart", "重新构建并重启"),
-    ("Recents", "最近"),
-    ("Recommended", "推荐"),
-    ("Recommended fixes for base image {0}{1}", "基础镜像 {0}{1} 的推荐修复"),
-    (
-        "Reduce your image size and build times by improving your Dockerfile.",
-        "通过改进 Dockerfile 来减少镜像大小和构建时间。",
-    ),
-    ("Reload", "重新加载"),
-    ("Remote Source", "远程源"),
-    ("Remove all my unused images and containers", "删除所有未使用的镜像和容器"),
-    ("Remove container", "删除容器"),
-    ("Remove dev environment", "删除开发环境"),
-    ("Remove from Desktop", "从 Desktop 删除"),
-    ("Rename container {0}", "重命名容器 {0}"),
-    ('Repository will be cloned into "{0}" within the path above.', '存储库将会克隆到上述路径中的 "{0}"。'),
-    ('Repository {0} cloned into "{1}" within the path above.', '存储库 {0} 已克隆到上述路径中的 "{1}"。'),
-    ("Request a guide", "请求指南"),
-    ("Request a sample", "请求示例"),
-    ("Requires running Kubernetes cluster.", "需要运行 Kubernetes 集群。"),
-    ("Reset Cluster", "重置集群"),
-    ("Resolving shell...", "解析 shell 中..."),
-    ("Restarting...", "重启中..."),
-    ("Review these terms carefully before proceeding.", "在继续前，请仔细审查这些条款。"),
-    ("Run a microservices container", "运行微服务容器"),
-    ("Run a single container", "运行单个容器"),
-    ("Run command", "运行命令"),
-    ("Run your apps in the cloud", "在云中运行你的应用"),
-    ("Running", "运行中"),
-    ("Running tasks...", "运行任务中..."),
-    ("SBOM indexing", "SBOM 索引"),
-    ("SSH", None),
-    ("Save Changes", "保存修改"),
-    ("Search for images, containers, volumes, extensions and more...", "搜索镜像，容器，卷，扩展以及更多..."),
-    ("Select", "选择"),
-    ("Select a directory", "选择一个目录"),
-    (
-        "Select a project context and easily identifiable name for your project",
-        "选择一个项目上下文和易于识别的项目名称",
-    ),
-    ("Select a remote source, and a local destination to clone to", "选择远程源和本地克隆目的地"),
-    ("Select folder", "选择文件夹"),
-    ("Selected folder and repository", "选定的文件夹和仓库"),
-    ("Send Bugsnag test event", "发送 Bugsnag 测试事件"),
-    ("Send Bugsnag test event with random groupingHash", "发送带有随机 groupingHash 的 Bugsnag 测试事件"),
-    ("Services that will run", "将要运行的服务"),
-    ("Setup", "设置"),
-    (
-        "Share code (including dependencies) with your team members in one click.",
-        "一键分享代码（包括依赖项）给团队成员。",
-    ),
-    ("Share your apps with your team", "与团队共享你的应用"),
-    ("Show CLI hints", "显示命令行提示"),
-    ("Show all {0} locations", "显示所有 {0} 位置"),
-    ("Show package details", "显示软件包详情"),
-    ("Sign in to continue", "登录以继续"),
-    ("Sign in with GitHub", "使用 Github 登录"),
-    ("Sign in with Google", "使用 Google 登录"),
-    (
-        "Simulates different tray icon statuses. Note: Dynamic icons are disabled on Linux unless you provide an overriding environment variable.",
-        "模拟不同的托盘图标状态。注意: 除非提供覆盖环境变量，否则动态图标在 Linux 上被禁用。",
-    ),
-    ("Source repository", "源存储库"),
-    ("Speed up your Docker Builds.", "加快你的 Docker 构建。"),
-    (
-        "Start a Kubernetes single-node cluster when starting Docker Desktop.",
-        "启动 Docker Desktop 时启动 Kubernetes 单节点集群。",
-    ),
-    ("Start typing to search in repository...", "开始输入以在存储库中搜索..."),
-    ("Starting service...", "启动服务中..."),
-    ("Stopped", "已停止"),
-    ("Stopping...", "停止中..."),
-    ("Submit feedback", "提交反馈"),
-    ("Switch to Docker Cloud", "切换到 Docker 云"),
-    ("System Status", "系统状态"),
-    ("TOKENS", None),
-    ("TOKENS/S", None),
-    (
-        "Take advantage of Project Harmonia's collaboration features. No more screen sharing or deploying from someone else's branch. You can now effortlessly share previews of your cloud-based applications for real-time feedback.",
-        "利用 Harmonia 项目的协作功能。不再需要屏幕共享或从他人的分支部署。你现在可以轻松地分享基于云的应用程序的预览以获取实时反馈。",
-    ),
-    ("Tasks", "任务"),
-    (
-        "Tell us more about how to run your project, save time getting started",
-        "告诉我们更多关于如何运行你的项目，节省开始时间",
-    ),
-    ("Tell us more...", "告诉我们更多..."),
-    (
-        "The Git repository is cloned into a Volume and attaches to your containers so that you can develop directly inside of them using Visual Studio Code.",
-        "Git 存储库已克隆到卷中，并附加到你的容器上，这样你就可以直接在其中使用 Visual Studio Code 进行开发。",
-    ),
-    (
-        "The Git repository is cloned to a local directory and attaches to your containers as a bind mount. This shares the directory from your computer to the container, and allows you to develop using any local editor or IDE.",
-        "Git 存储库已克隆到本地目录，并作为绑定挂载附加到你的容器上。这将从你的电脑共享目录到容器，允许你使用任何本地编辑器或 IDE 进行开发。",
-    ),
-    (
-        "The file {0} was not found in your project directory. Edit your run config, or review your project for changes.",
-        "在你的项目目录中找不到 {0} 文件。编辑你的运行配置，或者检查项目是否有更改。",
-    ),
-    ("The microservices sample has a server, proxy, and DB.", "微服务示例包含服务器、代理和数据库。"),
-    ("The run command cannot be deleted while it is running", "运行命令在执行时无法删除"),
-    ("The run command cannot be edited while it is running", "运行命令在执行时无法编辑"),
-    ("This button will focus the current window after 2 seconds", "此按钮将在2秒后聚焦当前窗口"),
-    ("This layer belongs to a base image of the selected image", "此层属于选定镜像的基础镜像的一部分"),
-    ("This layer belongs to the selected image", "此层属于选定镜像的一部分"),
-    (
-        "This migration allows us to fix the column width for the actions column in case Gordon is enabled",
-        "如果启用了 Gordon，此迁移允许我们修复操作列的列宽",
-    ),
-    (
-        "This migration fixes the column order for the active builds grid after the author column was added",
-        "此迁移修复了添加作者列后的活跃构建网格的列顺序",
-    ),
-    (
-        "This migration fixes the column order for the build history grid after the author column was added",
-        "此迁移修复了添加作者列后的构建历史网格的列顺序",
-    ),
-    (
-        "This page is used for manual testing, and by E2E tests that verify app-wide functionality. It can be reached via a modified Konami code: ↑↑↓↓←→←→BT",
-        "此页面用于手动测试，以及用于验证应用范围功能的 E2E 测试。可以通过修改后的 Konami 代码到达: ↑↑↓↓←→←→BT",
-    ),
-    (
-        "This will prevent the ability to install any other extension via the Extension SDK tools.",
-        "这将阻止通过扩展 SDK 工具安装任何其他扩展。",
-    ),
-    (
-        "To create a Kubernetes cluster with kind, sign in to your Docker account.",
-        "要使用 kind 创建 Kubernetes 集群，请登录 Docker 账户。",
-    ),
-    ("To do this, open a terminal and run:", "为此，请打开终端并运行: "),
-    (
-        "To install new binaries, you will be asked to enter your password.",
-        "要安装新的二进制文件，系统会要求你输入密码。",
-    ),
-    (
-        "To start a new build, run the following command in your source code location:",
-        "若要开始新的构建，请在源代码位置运行以下命令:",
-    ),
-    ("Tray icon", "托盘图标"),
-    ("Try our new self-diagnose tool", "尝试我们的新自我诊断工具"),
-    ("Turn on Dev Environments {0}", "打开开发环境 {0}"),
-    ("Type: ", "类型:"),
-    ("UPDATED FOLDER", "更新的文件夹"),
-    (
-        "Understand the purpose of each instruction and how it affects your image.",
-        "理解每条指令的目的及其如何影响你的镜像。",
-    ),
-    (
-        "Unlock next-level intelligence in the CLI and Docker Desktop with AI-powered expertise",
-        "利用由 AI 驱动的专业知识, 在命令行和 Docker Desktop 中解锁更高水平的智能",
-    ),
-    (
-        "Update to the latest version of WSL 2 from Microsoft (Recommended - requires administrator password)",
-        "从 Microsoft 更新到最新版本的 WSL 2 （推荐 - 需要管理员密码）",
-    ),
-    ("Url: ", "地址:"),
-    ("Use Virtualization framework", "使用虚拟化框架"),
-    ("Use a container locally as a full development environment.", "将容器用作完整的本地开发环境。"),
-    ("Use recommended settings (requires administrator password)", "使用建议的设置（需要管理员密码）"),
-    (
-        "Use {0} or {1} for creating and managing Docker Desktop Linux VM in macOS 12.5 and above. {2}{3} is our most performant option for Apple Silicon Macs. {4}",
-        "在 macOS 12.5 及更高版本中，使用 {0} 或 {1} 创建和管理 Docker Desktop Linux 虚拟机（VM）。对于 Apple Silicon Mac，{2}{3} 是我们性能最佳的选择。{4}",
-    ),
-    (
-        "Uses Virtualization framework for creating and managing Docker Desktop Linux VM in macOS 12.5 and above.",
-        "在 macOS 12.5 及更高版本中，使用虚拟化框架创建和管理 Docker Desktop Linux 虚拟机（VM）。",
-    ),
-    ("Very satisfied", "非常满意"),
-    ("Very unsatisfied", "非常不满意"),
-    ("View Scout dashboard", "查看 Scout 仪表板"),
-    ("View in Github", "在 Github 上查看"),
-    ("View in Hub", "在 Hub 中查看"),
-    ("View package locations", "查看软件包位置"),
-    (
-        "VirtioFS brings improved I/O performance for operations on bind mounts. {0} It can only be used with {1} or {2}.",
-        "VirtioFS 提高了绑定挂载操作的 I/O 性能。{0} 它只能与 {1} 或 {2} 一起使用。",
-    ),
-    ("Visual Studio Code", None),
-    ("Visual Studio Code Remote Containers Extension", "Visual Studio Code 远程容器扩展"),
-    ("VsCode", None),
-    ("We found your project", "我们找到了你的项目"),
-    ("We run `wsl --update` for you.", "正在为你运行 'wsl --update' 命令。"),
-    ("What is Docker Scout?", "什么是 Docker Scout？"),
-    (
-        "When cloning a Git repository using SSH, ensure you've added your SSH key to the ssh-agent.",
-        "当使用 SSH 克隆 Git 存储库时，确保你已将 SSH 密钥添加到 ssh-agent。",
-    ),
-    (
-        'When installing Docker Desktop with the {0}, in-app updates are disabled to ensure your organization maintains the required version. To update, download the latest installer from the {1} under "Security and Access"',
-        '当使用 {0} 安装 Docker Desktop 时，应用内更新会被禁用以确保您的组织保持所需的版本。要进行更新，请从"安全与访问"下的 {1} 下载最新的安装程序',
-    ),
-    ("Window focus", "窗口焦点"),
-    ("With existing code & Dockerfiles", "与现有代码和 Dockerfile"),
-    ("You are a helpful assistant", None),
-    ("You are about to remove the container '{0}' and all its data.", "你即将删除容器 '{0}' 及其所有数据。"),
-    (
-        "You are about to remove the dev environment '{0}' and all its containers.",
-        "你即将删除开发环境 '{0}' 及其所有容器。",
-    ),
-    ("You can open you favourite IDE and start coding", "你可以打开你喜欢的 IDE 并开始编码"),
-    ("You currently have access to the following experimental features:", "你目前可以访问以下实验功能:"),
-    (
-        "You'll need to manually update WSL 2 and then relaunch Docker Desktop to complete set up.",
-        "你需要手动更新 WSL 2，然后重新启动 Docker Desktop 以完成设置。",
-    ),
-    ("You're all set", "一切就绪"),
-    ("click here", "点击这里"),
-    ("https://", None),
-    ("these steps", "这些步骤"),
-    ("{0} (UDP)", None),
-    ("{0} ready to be installed.", "{0} 准备就绪可以安装。"),
-    ("{0}Update base image", "{0}更新基础镜像"),
 ]
