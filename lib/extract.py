@@ -336,24 +336,22 @@ def generate_config(path: Path, include_old: bool = True, output: str = "extract
     for file in files(path):
         with open(file, "r", encoding="utf-8") as reader:
             content = reader.read()
-        for text in sorted(extract(content), key=lambda v: v.start):
-            new_config.update(text.config())
-
+            for text in extract(content):
+                new_config.update(text.config())
     buf = StringIO()
     buf.write("config = [\n")
     count = 0
-    for item in new_config.items():
+    for item in sorted(new_config.items()):
         if item[0] not in config_dict:
             count += 1
         buf.write(str(item))
         buf.write(",\n")
     if include_old:
         buf.write("# ==============================# old #==============================#\n")
-        for item in config_dict.items():
-            src, dst = item
-            if src not in new_config and dst != "":
-                buf.write(str(item))
-                buf.write(",\n")
+        old_config = {src: dst for src, dst in config_dict.items() if src not in new_config and dst != ""}
+        for item in sorted(old_config.items()):
+            buf.write(str(item))
+            buf.write(",\n")
     buf.write("]\n")
 
     if not new_config:
