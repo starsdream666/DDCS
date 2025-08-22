@@ -1,3 +1,4 @@
+import json
 import re
 from io import StringIO
 from pathlib import Path
@@ -332,28 +333,35 @@ def files(path: Path):
 
 
 def generate_config(path: Path, include_old: bool = True, output: str = "extract_config.py"):
+    # extra version
+    package_json = path / "package.json"
+    if not package_json.exists():
+        log.warn("package.json 不存在")
+        return
+    with open(package_json) as reader:
+        version = json.loads(reader.read())["version"]
+
     new_config = {}
     for file in files(path):
         with open(file, "r", encoding="utf-8") as reader:
             content = reader.read()
-        for text in sorted(extract(content), key=lambda v: v.start):
-            new_config.update(text.config())
+            for text in extract(content):
+                new_config.update(text.config())
 
+    all_config = {}
+    all_config.update(new_config)
+    all_config.update(config_dict)
     buf = StringIO()
     buf.write("config = [\n")
     count = 0
-    for item in new_config.items():
+    for item in sorted(all_config.items()):
         if item[0] not in config_dict:
             count += 1
         buf.write(str(item))
-        buf.write(",\n")
-    if include_old:
-        buf.write("# ==============================# old #==============================#\n")
-        for item in config_dict.items():
-            src, dst = item
-            if src not in new_config and dst != "":
-                buf.write(str(item))
-                buf.write(",\n")
+        if item[0] in new_config:
+            buf.write(",\n")
+        elif include_old:
+            buf.write(f", # deleted at version {version}\n")
     buf.write("]\n")
 
     if not new_config:
