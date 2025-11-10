@@ -4,3 +4,4 @@ app.asar.unpacked
 app.asar
 app-backup.asar
 test
+node_modules

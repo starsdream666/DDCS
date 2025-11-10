@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     if args.path is None:
         DDProcessor(True)
-        path = Path("./app/build")
+        path = Path("./app")
     else:
         path = Path(args.path)
     generate_config(path)

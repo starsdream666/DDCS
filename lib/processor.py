@@ -50,6 +50,7 @@ class DDProcessor:
 
                 return Path(f"{install_path}/frontend/resources")
             except FileNotFoundError:
+                log.warn('未找到Docker Desktop')
                 return None
         elif system == "Darwin":
             potential_paths = [
