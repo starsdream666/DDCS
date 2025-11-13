@@ -26,7 +26,7 @@ def convert_from_json():
     """
     尽量将原有 config.json 中的值提取出来, 判断是否在 extract_config 中
     """
-    config_set = set(s.strip() for src, dst in config if dst != "" for s in _re_text_vars.split(src))
+    config_set = set(s.strip() for conf in config if conf.dst != "" for s in _re_text_vars.split(conf.src))
     config_set.update(s.strip() for src, _ in config_manually for s in extract_qstr(src))
 
     used, total = 0, 0
