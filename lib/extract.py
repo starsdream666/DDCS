@@ -82,7 +82,8 @@ class Dst:
                 arg_buf.write(c)
 
         self.src = buf.getvalue()
-        self.dst = config_dict.get(self.src, "").dst
+        conf = config_dict.get(self.src)
+        self.dst = conf.src if conf else ""
         self.args = args
 
     def __bool__(self):
@@ -404,5 +405,5 @@ def replace(path: Path):
         with open(file, "w", encoding="utf-8") as writer:
             writer.write(content)
     for src, conf in config_dict.items():
-        if conf.dst is not None and conf.dst != "" and src not in used:
+        if conf.deleted_at == "" and conf.dst is not None and conf.dst != "" and src not in used:
             log.warn(f"unused: {src}")
