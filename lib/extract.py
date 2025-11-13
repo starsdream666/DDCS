@@ -2,15 +2,16 @@ import json
 import re
 from io import StringIO
 from pathlib import Path
-from typing import List, Tuple, Generator, Union
+from typing import List, Tuple, Generator, Union, Dict
 
 import black
 
 from common import log
+from lib.define import Config
 from lib.extract_config import config
 from lib.extract_config_manually import config_manually
 
-config_dict = dict(config)
+config_dict: Dict[str, Config] = {item.src: item for item in config}
 
 _re_text_vars = re.compile("(\{\d+})")
 # 捕获组需要包含 [], 以找到正确的字符串结尾
@@ -81,7 +82,7 @@ class Dst:
                 arg_buf.write(c)
 
         self.src = buf.getvalue()
-        self.dst = config_dict.get(self.src, "")
+        self.dst = config_dict.get(self.src, "").dst
         self.args = args
 
     def __bool__(self):
@@ -341,27 +342,32 @@ def generate_config(path: Path, include_old: bool = True, output: str = "extract
     with open(package_json) as reader:
         version = json.loads(reader.read())["version"]
 
-    new_config = {}
+    new_config: Dict[str, Config] = {}
     for file in files(path):
         with open(file, "r", encoding="utf-8") as reader:
             content = reader.read()
             for text in extract(content):
-                new_config.update(text.config())
+                new_config.update({src: Config(src=src, dst=dst) for src, dst in text.config()})
 
     all_config = {}
     all_config.update(new_config)
     all_config.update(config_dict)
     buf = StringIO()
-    buf.write("config = [\n")
+    buf.write(
+        """
+from typing import List
+from lib.define import Config
+
+config: List[Config] = [
+"""
+    )
     count = 0
-    for item in sorted(all_config.items()):
-        if item[0] not in config_dict:
+    for src, conf in sorted(all_config.items()):
+        if src not in config_dict:
             count += 1
-        buf.write(str(item))
-        if item[0] in new_config:
+        if src in new_config or include_old:
+            buf.write(str(conf))
             buf.write(",\n")
-        elif include_old:
-            buf.write(f", # deleted at version {version}\n")
     buf.write("]\n")
 
     if not new_config:
@@ -397,6 +403,6 @@ def replace(path: Path):
 
         with open(file, "w", encoding="utf-8") as writer:
             writer.write(content)
-    for src, dst in config_dict.items():
-        if dst is not None and dst != "" and src not in used:
+    for src, conf in config_dict.items():
+        if conf.dst is not None and conf.dst != "" and src not in used:
             log.warn(f"unused: {src}")
