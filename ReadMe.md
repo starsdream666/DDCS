@@ -53,9 +53,14 @@ python ddcs.py --v2
     ```
 2. 进行翻译
 
-   在 [extract_config.py](./lib/extract_config.py) 中的 config 是一个元组列表, 即 `[(英文, 中文), ...]`. 运行自动提取后,
-   新增的元组项包含一个英文文本, 和一个为空字符串(`""`)的中文文本, 请在 [extract_config.py](./lib/extract_config.py)
-   搜索空字符串并进行翻译.
+   在 [extract_config.py](./lib/extract_config.py) 中的 config 是一个列表, 类型是 [Config](./lib/define.py), 即
+   `[Config(src=英文, dst=中文, deleted_at=None), ...]`. 运行自动提取后,
+   新增的 config 项目中:
+    - src: 为英文文本
+    - dst: 为空字符串 `""` 的中文文本
+    - deleted_at: 如果旧配置项在当前版本没有提取到, 则会将其 deleted_at 设置为当前版本号
+
+   请在 [extract_config.py](./lib/extract_config.py) 搜索空字符串并进行翻译.
 
    **注意事项**:
     - 英文文本可能为包含 js 变量的模板字符串, 如 `Images (${c.images.count})`, 翻译后的中文应当保留变量, 即
@@ -64,6 +69,24 @@ python ddcs.py --v2
       翻译后的中文应当保留替换字段, 即`在 {1} 列选择 {0} 以查看其运行情况`. 如果替换字段遗漏, 在替换阶段也会有警告日志输出.
     - 对于不需要翻译的项目, **请不要删除**, 而是将中文值设为 `None`, 如 `("Python", None)`
     - 对于没有自动提取的文本, 请添加到 [extract_config_manually.py](./lib/extract_config_manually.py) 中
+
+    提取示例:
+    ```diff
+    config: List[Config] = [
+    - Config(src="outdated text", dst="过时文本"),
+    + Config(src="outdated text", dst="过时文本", deleted_at="4.50.0"),
+    + Config(src="new text in {0}", dst="", deleted_at=None),
+    + Config(src="Python", dst="", deleted_at=None),
+    ]
+    ```
+    我们进行翻译
+    ```diff
+    config: List[Config] = [
+    - Config(src="outdated text", dst="过时文本"),
+    + Config(src="outdated text", dst="过时文本", deleted_at="4.50.0"),
+    + Config(src="new text in {0}", dst="{0} 中的新文本", deleted_at=None), # 保持模板变量 
+    + Config(src="Python", dst=None, deleted_at=None), # 专业词汇不需要翻译 
+    ]
 
 3. 验证翻译
 
