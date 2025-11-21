@@ -10,16 +10,14 @@ master 分支目前支持 Windows / Mac。
 - python3.10+
 - nodejs
 
-**注意：如果出现如下类似报错则：**
-```text
-asar : 无法将“asar”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。
-```
-```bash
-npm install -g asar
-```
 
 ## 使用方法
-下载源码，管理员权限启动终端并进入到源码根目录，使用以下命令即可：
+下载源码，管理员权限启动终端并进入到源码根目录，使用以下命令安装依赖
+```bash
+pip install black
+npm install -g asar
+```
+使用以下命令进行汉化
 ```bash
 python ddcs.py
 ```
